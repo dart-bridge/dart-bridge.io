@@ -3,5 +3,5 @@
 # HTTP Server options
 server:
   host: localhost
-  port: 1337
+  port: 1338
   publicRoot: web
