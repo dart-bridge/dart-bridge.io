@@ -1,9 +1,4 @@
 # [bridge.database]
 
-# Available options: in_memory, mongodb
+# Available options: in_memory
 driver: in_memory
-
-# Options for MongoDB driver
-mongodb:
-  port: 27017
-  database: app

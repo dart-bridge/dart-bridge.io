@@ -1,20 +1,52 @@
 @extends ('app')
 
 @block ('content')
-  <div>
-    <img src="http://dart-bridge.github.io/images/logo-blue.svg" alt="Bridge">
+  <style>
+    body, html, .wrap-all {
+        height:100%;
+        width:100%;
+    }
+    img {
+        max-width: 20em;
+        box-sizing: border-box;
+        padding: 1em 0;
+        width:100%;
+    }
+    .wrap-all {
+        display: table;
+    }
+    .wrap-row {
+        display: table-row;
+    }
+    .wrap-cell {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    iframe {
+        display: inline-block;
+        margin: auto;
+        width: 6.5em;
+        padding-top: 0.2em;
+        vertical-align: bottom;
+    }
+  </style>
+  <div class="wrap-all">
+    <div class="wrap-row">
+      <div class="wrap-cell">  
+      <div>
+        <img src="http://dart-bridge.github.io/images/logo-blue.svg" alt="Bridge">
+      </div>
+
+      <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&amp;repo=framework&amp;type=star&amp;count=true" frameborder="0" scrolling="0" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&amp;repo=framework&amp;type=watch&amp;count=true&amp;v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+      <h6>
+        This will be the new documentation site, itself built on Bridge.<br>
+        Until it's done, please refer to
+        <a href="//dart-bridge.github.io">dart-bridge.github.io</a>
+      </h6>
+    </div>
   </div>
-
-  <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=star&count=true"
-          frameborder="0" scrolling="0" height="20px"></iframe>
-  <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=watch&count=true&v=2"
-          frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-
-  <h6>
-    <small>
-    	This will be the new documentation site, itself built on Bridge.<br>
-    	Until it's done, please refer to
-    	<a href="//dart-bridge.github.io">dart-bridge.github.io</a>
-    </small>
-  </h6>
+</div>
 @end block

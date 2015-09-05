@@ -18,9 +18,12 @@ packages:
     source: hosted
     version: "0.15.2+6"
   bridge:
-    description: bridge
-    source: hosted
-    version: "1.0.0-alpha5"
+    description:
+      ref: trestle
+      resolved-ref: "2f541b6b8f9e6c233e9251979990ecdfbb70190b"
+      url: "https://github.com/dart-bridge/framework"
+    source: git
+    version: "1.0.0-alpha6"
   bson:
     description: bson
     source: hosted
@@ -96,7 +99,7 @@ packages:
   logging:
     description: logging
     source: hosted
-    version: "0.10.0"
+    version: "0.9.3"
   markdown:
     description: markdown
     source: hosted
@@ -125,6 +128,10 @@ packages:
     description: node_shims
     source: hosted
     version: "0.1.3"
+  options_file:
+    description: options_file
+    source: hosted
+    version: "0.11.0"
   package_config:
     description: package_config
     source: hosted
@@ -145,6 +152,10 @@ packages:
     description: pool
     source: hosted
     version: "1.1.0"
+  postgresql:
+    description: postgresql
+    source: hosted
+    version: "0.3.1+1"
   pub_semver:
     description: pub_semver
     source: hosted
@@ -177,6 +188,10 @@ packages:
     description: source_span
     source: hosted
     version: "1.2.0"
+  sqljocky:
+    description: sqljocky
+    source: hosted
+    version: "0.13.0"
   stack_trace:
     description: stack_trace
     source: hosted
@@ -189,6 +204,13 @@ packages:
     description: test
     source: hosted
     version: "0.12.4+7"
+  trestle:
+    description:
+      ref: null
+      resolved-ref: "536beb229fdf141f738843923121391287f3dccd"
+      url: "https://github.com/dart-bridge/trestle"
+    source: git
+    version: "0.1.0"
   unittest:
     description: unittest
     source: hosted

@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-stylus": "^2.0.6",
+    "reset.styl": "^0.1.1"
+  }
+}

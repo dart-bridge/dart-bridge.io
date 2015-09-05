@@ -1,6 +1,7 @@
 .buildlog
 .pub/
 build/
+node_modules
 packages
 .packages
 .env

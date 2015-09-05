@@ -2,7 +2,7 @@
 
 @block ('content')
   <h3>
-    ${message == null ? 'Oops! Something went wrong!' : message}
+    ${message ?? 'Oops! Something went wrong!'}
     @if (code != 200 && code != null)
       <small>($code)</small>
     @end if

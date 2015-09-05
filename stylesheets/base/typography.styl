@@ -1,0 +1,145 @@
+pInRems = 1
+paragraphSpacing = 1
+
+rem(p)
+  (p * pInRems)rem
+
+px(p)
+  (p * pInRems * 16)px
+
+font-size-manual(val)
+  font-size(val, raw: true)
+
+line-height-manual(val)
+  line-height(val, raw: true)
+
+font-size(p, raw = false)
+  if raw
+    font-size p
+  else
+    font-size px(p)
+    font-size rem(p)
+  
+line-height(p, raw = false)
+  if raw
+    line-height p
+  else
+    line-height px(p)
+    line-height rem(p)
+
+margin(top = false, 
+       left = false, 
+       right = false, 
+       bottom = false)
+  if top
+    margin-top px(top)
+    margin-top rem(top)
+  if left
+    margin-left px(left)
+    margin-left rem(left)
+  if right
+    margin-right px(right)
+    margin-right rem(right)
+  if bottom
+    margin-bottom px(bottom)
+    margin-bottom rem(bottom)
+
+padding(top = false, 
+        left = false, 
+        right = false, 
+        bottom = false)
+  if top
+    padding-top px(top)
+    padding-top rem(top)
+  if left
+    padding-left px(left)
+    padding-left rem(left)
+  if right
+    padding-right px(right)
+    padding-right rem(right)
+  if bottom
+    padding-bottom px(bottom)
+    padding-bottom rem(bottom)
+
+body
+  font-family 'aktiv-grotesk-std' 'Helvetica Neue' 'Helvetica' 'Arial' sans-serif
+  font-size 0.9
+  line-height 0.9
+
+p, h1, h2, h3, h4, h5, h6
+  margin(top: paragraphSpacing, bottom: paragraphSpacing)
+
+p
+  line-height 1.3
+  
+  &.lead
+    font-size 1.3
+    line-height 1.6
+    font-weight 200
+
+small
+  color #999
+  font-size-manual 0.8em
+  font-weight 400
+    
+h1
+  font-size 2.2
+  line-height 2.4
+  font-weight bold
+
+h2
+  font-size 1.3
+  line-height 1.5
+  font-weight bold
+
+h3
+  font-size 1
+  line-height 1.3
+  font-weight bold
+
+h4
+  line-height 1.3
+  font-weight bold
+
+h5
+  font-size 0.7
+  line-height 1
+  text-transform uppercase
+  font-weight bold
+  letter-spacing 0.05em
+
+h6
+  color #999
+  font-size 0.7
+  letter-spacing 0.04em
+  line-height 0.9
+
+article
+  ul, ol
+    line-height 1.3
+    margin(left: 1.15)
+  ul
+    list-style disc
+  ol
+    list-style decimal
+
+blockquote
+  padding(left: 1.15)
+  border-left 0.2em solid #bbb
+  font-style italic
+    
+code, pre
+  font-family 'inconsolata' 'Inconsolata' monospace
+  font-size 1
+  line-height 1.3
+
+pre
+  margin(top: paragraphSpacing, bottom: paragraphSpacing)
+  
+em
+  font-style italic
+
+strong
+  font-weight bold
+
+
