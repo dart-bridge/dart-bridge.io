@@ -7,3 +7,11 @@ import 'package:bridge/src/tether/library_shared.dart';
 import 'package:bridge/src/view/shared/library.dart';
 
 part 'shared_structures.dart';
+
+class Menu {
+  static get items => [
+    {'url': '/', 'title': 'Home'},
+    {'url': '/', 'title': 'Home'},
+    {'url': '/', 'title': 'Home'},
+  ];
+}
