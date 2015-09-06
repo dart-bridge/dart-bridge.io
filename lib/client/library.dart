@@ -9,3 +9,4 @@ import '../shared/library.dart';
 /// the classes associated with the client -- the view layer.
 
 part 'docs/client_doc_requester.dart';
+part 'router.dart';

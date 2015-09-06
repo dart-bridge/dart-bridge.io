@@ -20,24 +20,18 @@ main() async {
   final container = querySelector('#doc-content');
   final validator = new NodeValidatorBuilder.common()
   ..allowNavigation(new SiteUriPolicy());
-
-  navigateToDoc(String url, String content) {
-    container.setInnerHtml(content, validator: validator);
-  }
+  final router = new Router();
 
   routes.docs.forEach((url, handler) async {
+    router.on('/docs/$url').listen((m) async {
+      container.setInnerHtml(await handler(), validator: validator);
+    });
+
     AnchorElement link = querySelector('a[href="/docs/$url"]');
     await for (MouseEvent event in link.onClick) {
       event.preventDefault();
-      window.history.pushState(url, document.title, '/docs/$url');
-      navigateToDoc(url, await handler());
+      router.navigate('/docs/$url');
     }
-  });
-
-  window.onPopState.listen((PopStateEvent event) async {
-    String uri = event.state;
-    if (uri == null) return window.location.reload();
-    navigateToDoc(uri, await routes.docs[uri]());
   });
 }
 
