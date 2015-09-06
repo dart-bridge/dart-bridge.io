@@ -9,6 +9,6 @@ import 'package:bridge/view.dart';
 /// (uncomment the second line).
 class PagesController {
   index() {
-    return template('index');
+    return template('index', withScript: 'home');
   }
 }

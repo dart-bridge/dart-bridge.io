@@ -30,54 +30,6 @@ line-height(p, raw = false)
     line-height px(p)
     line-height rem(p)
 
-margin(top = false,
-       left = false,
-       right = false,
-       bottom = false)
-  if top
-    margin-top px(top)
-    margin-top rem(top)
-  if left
-    margin-left px(left)
-    margin-left rem(left)
-  if right
-    margin-right px(right)
-    margin-right rem(right)
-  if bottom
-    margin-bottom px(bottom)
-    margin-bottom rem(bottom)
-
-padding(all = null,
-        top = null,
-        left = null,
-        right = null,
-        bottom = null)
-  if all
-    if top == null
-      padding-top px(all)
-      padding-top rem(all)
-    if left == null
-      padding-left px(all)
-      padding-left rem(all)
-    if right == null
-      padding-right px(all)
-      padding-right rem(all)
-    if bottom == null
-      padding-bottom px(all)
-      padding-bottom rem(all)
-  if top
-    padding-top px(top)
-    padding-top rem(top)
-  if left
-    padding-left px(left)
-    padding-left rem(left)
-  if right
-    padding-right px(right)
-    padding-right rem(right)
-  if bottom
-    padding-bottom px(bottom)
-    padding-bottom rem(bottom)
-
 body
   font-family aktiv-grotesk
   font-size 0.9

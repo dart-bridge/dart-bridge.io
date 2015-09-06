@@ -2,13 +2,11 @@
   <ul class="toolbar">
     <ul class="left">
       <li class="img-container">
-        <img src="/img/logo.svg" alt="Bridge">
+        <a href='/'><img src="/img/logo.svg" alt="Bridge"></a>
       </li>
     </ul>
     <ul class="right">
-      @for (item in Menu.items)
-        <li><a href="${item['url']}">${item['title']}</a></li>
-      @end for
+      <li><a href="/docs">Docs</a></li>
     </ul>
   </ul>
 </header>

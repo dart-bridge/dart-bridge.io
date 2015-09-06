@@ -10,11 +10,3 @@ import 'dart:async';
 part 'shared_structures.dart';
 part 'routes.dart';
 part 'docs/doc_requester.dart';
-
-class Menu {
-  static get items => [
-    {'url': '/', 'title': 'Home'},
-    {'url': '/', 'title': 'Home'},
-    {'url': '/', 'title': 'Home'},
-  ];
-}

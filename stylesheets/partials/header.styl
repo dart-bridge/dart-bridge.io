@@ -1,6 +1,12 @@
 .toolbar
   display inline-block
   width 100%
+  background-color rgba(250, 250, 250, 0.87)
+
+  @media (min-width 40em)
+    position: fixed;
+    z-index 10000
+    -webkit-backdrop-filter: blur(15px)
 
   .right, .left
     padding(left: 0.3, right: 0.3)
@@ -22,7 +28,7 @@
     height 2.4em
     padding(top: 1, bottom: 1, left: 0.7)
 
-  li a
+  .right li a
     font-size 1
     text-transform uppercase
     font-weight bold
@@ -30,4 +36,6 @@
     padding(all: 1.7, left: 0.7, right: 0.7)
     transition color 0.2s
 
-
+@media (min-width 40em)
+  article
+    padding-top 5em

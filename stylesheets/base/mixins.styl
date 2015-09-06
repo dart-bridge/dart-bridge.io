@@ -1,2 +1,68 @@
 fancy-transition(args...)
   transition args cubic-bezier(.09,.72,0,1)
+
+
+padding(all = null,
+        top = null,
+        left = null,
+        right = null,
+        bottom = null)
+  if all
+    if top == null
+      padding-top px(all)
+      padding-top rem(all)
+    if left == null
+      padding-left px(all)
+      padding-left rem(all)
+    if right == null
+      padding-right px(all)
+      padding-right rem(all)
+    if bottom == null
+      padding-bottom px(all)
+      padding-bottom rem(all)
+  if top
+    padding-top px(top)
+    padding-top rem(top)
+  if left
+    padding-left px(left)
+    padding-left rem(left)
+  if right
+    padding-right px(right)
+    padding-right rem(right)
+  if bottom
+    padding-bottom px(bottom)
+    padding-bottom rem(bottom)
+
+margin(all = null,
+       top = null,
+       left = null,
+       right = null,
+       bottom = null)
+  if all == auto
+    margin all
+  else
+    if all
+      if top == null
+        margin-top px(all)
+        margin-top rem(all)
+      if left == null
+        margin-left px(all)
+        margin-left rem(all)
+      if right == null
+        margin-right px(all)
+        margin-right rem(all)
+      if bottom == null
+        margin-bottom px(all)
+        margin-bottom rem(all)
+    if top
+      margin-top px(top)
+      margin-top rem(top)
+    if left
+      margin-left px(left)
+      margin-left rem(left)
+    if right
+      margin-right px(right)
+      margin-right rem(right)
+    if bottom
+      margin-bottom px(bottom)
+      margin-bottom rem(bottom)
