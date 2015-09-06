@@ -1,0 +1,12 @@
+@extends ('app')
+
+@block ('content')
+  <ul>
+    @for (url in urls)
+      <a href='/docs/$url'>$url</a>
+    @end for
+  </ul>
+  <div id="doc-content">
+    $content
+  </div>
+@end block

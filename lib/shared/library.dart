@@ -5,8 +5,11 @@ library app.shared;
 
 import 'package:bridge/src/tether/library_shared.dart';
 import 'package:bridge/src/view/shared/library.dart';
+import 'dart:async';
 
 part 'shared_structures.dart';
+part 'routes.dart';
+part 'docs/doc_requester.dart';
 
 class Menu {
   static get items => [

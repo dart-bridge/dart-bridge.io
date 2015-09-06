@@ -1,5 +1,7 @@
 import 'package:bridge/http.dart';
 import 'package:bridge/tether.dart';
+import 'package:bridge/view.dart';
+import '../shared/library.dart';
 
 /// Controllers
 import 'pages_controller.dart';
@@ -13,8 +15,16 @@ class Api {
 
   Api(PagesController this.controller);
 
-  routes(Router router) {
+  routes(Router router, Routes routes) {
     router.get('/', controller.index, name: 'index');
+
+    routes.docs.forEach((url, handler) {
+      router.get('docs/$url', () async =>
+          template('doc', withData: {
+            'content': await handler(),
+            'urls': routes.docs.keys,
+          }, withScript: 'main'));
+    });
   }
 
   tether(Tether tether) {
