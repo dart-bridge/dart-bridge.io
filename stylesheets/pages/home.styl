@@ -7,9 +7,10 @@ section
   transition-timing-function cubic-bezier(.29, .82, .34, .99)
   transition-duration 1.3s
 
-html.js section:not(.shown) .copy, section:not(.shown) .figure
-  opacity 0
-  transform translateY(7em)
+html.js section:not(.shown)
+  .copy, .figure
+    opacity 0
+    transform translateY(7em)
 
 section:not(.shown) .figure
   transform translateY(12em)
