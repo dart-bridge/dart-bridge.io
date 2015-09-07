@@ -20,19 +20,18 @@ padding(all = null,
     if bottom == null
       padding-bottom px(all)
       padding-bottom rem(all)
-  else
-    if top
-      padding-top px(top)
-      padding-top rem(top)
-    if left
-      padding-left px(left)
-      padding-left rem(left)
-    if right
-      padding-right px(right)
-      padding-right rem(right)
-    if bottom
-      padding-bottom px(bottom)
-      padding-bottom rem(bottom)
+  if top
+    padding-top px(top)
+    padding-top rem(top)
+  if left
+    padding-left px(left)
+    padding-left rem(left)
+  if right
+    padding-right px(right)
+    padding-right rem(right)
+  if bottom
+    padding-bottom px(bottom)
+    padding-bottom rem(bottom)
 
 margin(all = null,
        top = null,
@@ -55,16 +54,15 @@ margin(all = null,
       if bottom == null
         margin-bottom px(all)
         margin-bottom rem(all)
-    else
-      if top
-        margin-top px(top)
-        margin-top rem(top)
-      if left
-        margin-left px(left)
-        margin-left rem(left)
-      if right
-        margin-right px(right)
-        margin-right rem(right)
-      if bottom
-        margin-bottom px(bottom)
-        margin-bottom rem(bottom)
+    if top
+      margin-top px(top)
+      margin-top rem(top)
+    if left
+      margin-left px(left)
+      margin-left rem(left)
+    if right
+      margin-right px(right)
+      margin-right rem(right)
+    if bottom
+      margin-bottom px(bottom)
+      margin-bottom rem(bottom)
