@@ -19,8 +19,8 @@ packages:
     version: "0.15.2+6"
   bridge:
     description:
-      ref: trestle
-      resolved-ref: "2f541b6b8f9e6c233e9251979990ecdfbb70190b"
+      ref: develop
+      resolved-ref: e721f9a1e5cdcf06041c0fe35ea4575c8c16e3fb
       url: "https://github.com/dart-bridge/framework"
     source: git
     version: "1.0.0-alpha6"
@@ -205,12 +205,9 @@ packages:
     source: hosted
     version: "0.12.4+7"
   trestle:
-    description:
-      ref: null
-      resolved-ref: "536beb229fdf141f738843923121391287f3dccd"
-      url: "https://github.com/dart-bridge/trestle"
-    source: git
-    version: "0.1.0"
+    description: trestle
+    source: hosted
+    version: "0.1.1"
   unittest:
     description: unittest
     source: hosted
