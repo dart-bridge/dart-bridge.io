@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang='en' class='nojs'>
+<html lang='en' class='no-js no-backdrop-filter'>
 
   <head>
     <title>Bridge</title>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script>
-      document.querySelector('html').className = 'js';
+      var htmlEl = document.querySelector('html');
+      htmlEl.className = htmlEl.className
+          .replace('no-js', 'js');
+      if ('webkitBackdropFilter' in document.createElement('div').style)
+        htmlEl.className = htmlEl.className
+            .replace('no-backdrop-filter', 'backdrop-filter');
     </script>
     <link rel='stylesheet' href='/app.css'>
     <script src='//use.typekit.net/dcz8uda.js'></script>

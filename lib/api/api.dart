@@ -18,12 +18,14 @@ class Api {
   routes(Router router, Routes routes) {
     router.get('/', controller.index, name: 'index');
 
+    router.get('docs', controller.docs, name: 'docs');
+
     routes.docs.forEach((docRoute) {
       router.get(docRoute.url, () async =>
           template('doc', withData: {
             'docRoute': docRoute,
             'docRoutes': routes.docs,
-          }, withScript: 'main'));
+          }, withScript: 'docs'));
     });
   }
 

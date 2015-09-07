@@ -11,4 +11,8 @@ class PagesController {
   index() {
     return template('index', withScript: 'home');
   }
+
+  docs() {
+    return template('docs');
+  }
 }

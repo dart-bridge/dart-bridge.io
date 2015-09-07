@@ -1,10 +1,30 @@
-.toolbar
+.choke
+  max-width px(60)
+  max-width rem(60)
+  margin auto
+  box-sizing border-box
+
+.page-header
+  background-color #232323
+  color white
+  padding(top: 10, bottom: 3, left: 0, right: 0)
+  h1
+    padding(left: 1, right: 1)
+
+.page-header ~ article
+  padding-top px(paragraph-spacing)
+  padding-top rem(paragraph-spacing)
+
+html.backdrop-filter .main-header
+  background-color rgba(250, 250, 250, .68)
+
+.main-header
   display inline-block
   width 100%
-  background-color rgba(250, 250, 250, 0.87)
+  background-color rgba(250, 250, 250, .94)
 
   @media (min-width 40em)
-    position: fixed;
+    position fixed
     z-index 10000
     -webkit-backdrop-filter: blur(15px)
 
