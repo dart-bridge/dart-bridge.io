@@ -1,6 +1,7 @@
 import 'package:bridge/tether_client.dart';
 import 'package:app/client.dart';
 import 'dart:html';
+import 'dart:async';
 
 /// This the example boilerplate of a client script file. Inject this
 /// script into a template by using the following syntax in a controller.
@@ -33,6 +34,14 @@ main() async {
       event.preventDefault();
       router.navigate(docRoute.url);
     }
+  });
+
+  querySelectorAll('.dropdown').forEach((e) async {
+    final button = e.querySelector('button');
+    e.querySelectorAll('a').onClick.listen((_) => e.classes.remove('shown'));
+    final toggle = (_) => e.classes.toggle('shown');
+    button.onMouseUp.listen(toggle);
+    button.onTouchEnd.listen(toggle);
   });
 }
 

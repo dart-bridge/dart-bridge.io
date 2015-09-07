@@ -1,0 +1,55 @@
+.dropdown
+  float right
+  margin(right: 1)
+
+  button
+    height 3em
+    width 3em
+    background transparent
+    border none
+    position relative
+    z-index 100
+    float right
+
+    &:before, &:after
+      content ''
+      display block
+      height 0.6em
+      width 3em
+      background-color white
+      position absolute
+      left 0
+      border-radius 0.3em
+      transform-origin 1.4em 0.3em
+      transition transform 0.1s, background-color 0.1s
+
+    &:before
+      top 0.5em
+    &:after
+      bottom 0.5em
+
+  &.shown
+    button:before, button:after
+      background-color red
+    button:before
+      transform translateY(0.65em) rotate(45deg)
+    button:after
+      transform translateY(-0.65em) rotate(-45deg)
+
+  &:not(.shown) > .menu
+    display none
+
+  .menu
+    z-index 99
+    position absolute
+    box-sizing border-box
+    right 0
+    box-shadow 0 0.3em 2em rgba(0,0,0,0.4)
+    border-radius 0.3em
+    background-color white
+    padding-top 4em
+    margin-top -1em
+
+    a
+      display inline-block
+      padding(all: 1, right: 3, left: 3)

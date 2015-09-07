@@ -2,14 +2,22 @@
 
 @block ('content')
   <div class="page-header">
-    <h1 class="choke" id='doc-title'>${docRoute.title}</h1>
+    <div class="choke">
+      <div class="dropdown">
+        <button></button>
+        <ul class='menu'>
+          @for (docRoute in docRoutes)
+          <li>
+            <a href='${docRoute.url}'>${docRoute.title}</a>
+          </li>
+          @end for
+        </ul>
+      </div>
+    </div>
+    <h1 class="choke" id='doc-title'>
+      ${docRoute.title}
+    </h1>
   </div>
-
-  <ul>
-    @for (docRoute in docRoutes)
-      <a href='${docRoute.url}'>${docRoute.title}</a>
-    @end for
-  </ul>
 
   <article class='choke'>
     <div id="doc-content">
