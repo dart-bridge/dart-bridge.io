@@ -7,10 +7,25 @@ class Routes {
 
   Routes(DocRequester this._docs);
 
-  Map<String, DocGenerator> __docs;
+  List<DocRoute> __docs;
 
-  Map<String, DocGenerator> get docs => __docs ??= {
-    'index': () => _docs.get('index'),
-    'core/overview': () => _docs.get('core/index'),
-  };
+  List<DocRoute> get docs => __docs ??= [
+    new DocRoute('installation', 'Installation', () => _docs.get('installation')),
+    new DocRoute('core', 'bridge.core', () => _docs.get('core/index')),
+  ];
+}
+
+
+abstract class Route {
+  final String title;
+  final String url;
+
+  const Route(String this.url, String this.title);
+}
+
+class DocRoute extends Route {
+  final DocGenerator doc;
+  String get url => '/docs/${super.url}';
+
+  const DocRoute(String url, String title, DocGenerator this.doc) : super(url, title);
 }

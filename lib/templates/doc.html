@@ -1,12 +1,15 @@
 @extends ('app')
 
 @block ('content')
-  <ul>
-    @for (url in urls)
-      <a href='/docs/$url'>$url</a>
-    @end for
-  </ul>
-  <div id="doc-content">
-    $content
-  </div>
+  <article>
+    <ul>
+      @for (docRoute in docRoutes)
+        <a href='${docRoute.url}'>${docRoute.title}</a>
+      @end for
+    </ul>
+    <h1 id='doc-title'>${docRoute.title}</h1>
+    <div id="doc-content">
+      ${await docRoute.doc()}
+    </div>
+  </article>
 @end block

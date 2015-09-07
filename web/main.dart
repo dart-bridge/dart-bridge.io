@@ -1,7 +1,6 @@
 import 'package:bridge/tether_client.dart';
 import 'package:app/client.dart';
 import 'dart:html';
-import 'dart:async';
 
 /// This the example boilerplate of a client script file. Inject this
 /// script into a template by using the following syntax in a controller.
@@ -18,19 +17,21 @@ main() async {
   registerSharedStructures(tether);
 
   final container = querySelector('#doc-content');
+  final titleContainer = querySelector('#doc-title');
   final validator = new NodeValidatorBuilder.common()
   ..allowNavigation(new SiteUriPolicy());
   final router = new Router();
 
-  routes.docs.forEach((url, handler) async {
-    router.on('/docs/$url').listen((m) async {
-      container.setInnerHtml(await handler(), validator: validator);
+  routes.docs.forEach((docRoute) async {
+    router.on(docRoute.url).listen((m) async {
+      container.setInnerHtml(await docRoute.doc(), validator: validator);
+      titleContainer.text = docRoute.title;
     });
 
-    AnchorElement link = querySelector('a[href="/docs/$url"]');
+    AnchorElement link = querySelector('a[href="${docRoute.url}"]');
     await for (MouseEvent event in link.onClick) {
       event.preventDefault();
-      router.navigate('/docs/$url');
+      router.navigate(docRoute.url);
     }
   });
 }
@@ -44,6 +45,8 @@ class SiteUriPolicy implements UriPolicy {
       'github.com',
       'dart-bridge.github.io',
       'dart-bridge.io',
+      'pub.dartlang.org',
+      'www.dartlang.org',
     ].contains(uri.authority);
   }
 }
