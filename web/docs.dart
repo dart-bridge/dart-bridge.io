@@ -14,7 +14,7 @@ main() async {
   final container = querySelector('#doc-content');
   final titleContainer = querySelector('#doc-title');
   final validator = new NodeValidatorBuilder.common()
-  ..allowNavigation(new SiteUriPolicy());
+    ..allowNavigation(new SiteUriPolicy());
   final router = new Router();
 
   routes.docs.forEach((docRoute) async {
@@ -32,17 +32,10 @@ main() async {
 
   querySelectorAll('.dropdown').forEach((e) async {
     final button = e.querySelector('button');
-    e.querySelectorAll('a').onClick.listen((_) => e.classes.remove('shown'));
-    var canToggle = true;
-    final toggle = (Event _) async {
-      if (!canToggle) return;
-      e.classes.toggle('shown');
-      canToggle = false;
-      await new Future.delayed(const Duration(milliseconds: 400));
-      canToggle = true;
-    };
-    button.onMouseUp.listen(toggle);
-    button.onTouchEnd.listen(toggle);
+    e.querySelectorAll('a').onClick
+        .listen((_) => e.classes.remove('shown'));
+    final toggle = (_) => e.classes.toggle('shown');
+    new Tapper(button).stream.listen(toggle);
   });
 }
 
