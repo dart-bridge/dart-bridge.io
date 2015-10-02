@@ -13,3 +13,4 @@ import 'package:bridge/bridge_client.dart';
 part 'docs/client_doc_requester.dart';
 part 'router.dart';
 part 'tapper.dart';
+part 'anchor_events.dart';
