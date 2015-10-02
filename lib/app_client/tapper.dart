@@ -27,9 +27,10 @@ class Tapper {
     _touch = false;
   }
 
-  void _onMouseUp(MouseEvent event) {
+  Future _onMouseUp(MouseEvent event) async {
     if (_active && !_touch)
       _controller.add(event);
+    await new Future.delayed(const Duration(milliseconds: 600));
     _active = false;
   }
 
@@ -38,9 +39,10 @@ class Tapper {
     _active = _touch = true;
   }
 
-  void _onTouchEnd(TouchEvent event) {
+  Future _onTouchEnd(TouchEvent event) async {
     if (_active && _touch)
       _controller.add(event);
+    await new Future.delayed(const Duration(milliseconds: 600));
     _active = false;
   }
 }
