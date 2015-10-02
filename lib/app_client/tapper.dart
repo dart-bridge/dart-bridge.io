@@ -5,6 +5,7 @@ class Tapper {
   final StreamController<UIEvent> _controller = new StreamController<UIEvent>();
   bool _active = false;
   bool _touch = false;
+  bool _mouseEventIsBlocked = false;
 
   Tapper(Element this._element) {
     _startListening();
@@ -22,12 +23,13 @@ class Tapper {
   }
 
   void _onMouseDown(MouseEvent event) {
-    if (_active) return;
+    if (_active || _mouseEventIsBlocked) return;
     _active = true;
     _touch = false;
   }
 
   Future _onMouseUp(MouseEvent event) async {
+    if (_mouseEventIsBlocked) return;
     if (_active && !_touch)
       _controller.add(event);
     await new Future.delayed(const Duration(milliseconds: 900));
@@ -35,6 +37,7 @@ class Tapper {
   }
 
   void _onTouchStart(TouchEvent event) {
+    _blockMouseEvent();
     if (_active) return;
     _active = _touch = true;
   }
@@ -42,7 +45,12 @@ class Tapper {
   Future _onTouchEnd(TouchEvent event) async {
     if (_active && _touch)
       _controller.add(event);
-    await new Future.delayed(const Duration(milliseconds: 900));
     _active = false;
+  }
+
+  Future _blockMouseEvent() async {
+    _mouseEventIsBlocked = true;
+    await new Future.delayed(const Duration(seconds: 2));
+    _mouseEventIsBlocked = false;
   }
 }
