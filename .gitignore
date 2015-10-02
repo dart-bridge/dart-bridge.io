@@ -1,7 +1,6 @@
 .buildlog
 .pub/
 build/
-node_modules
 packages
 .packages
 .env
@@ -12,6 +11,6 @@ packages
 *.js.deps
 *.js.map
 
-
-cupid.log
+node_modules
+storage/bridge.log
 .cupid_history

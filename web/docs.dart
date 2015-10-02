@@ -1,21 +1,15 @@
-import 'package:bridge/tether_client.dart';
+import 'package:bridge/bridge_client.dart';
 import 'package:app/client.dart';
 import 'dart:html';
 import 'dart:async';
 
-/// This the example boilerplate of a client script file. Inject this
-/// script into a template by using the following syntax in a controller.
-///
-///     return template('templateName', withScript: 'main');
-///
-/// A good practice would be to delegate the client script into your client
-/// application in **lib/client** as neatly as possible.
+
 main() async {
+  // Register shared data structures
+  registerTransport();
   // Connect the tether
   await globalTether();
 
-  // Register shared data structures
-  registerSharedStructures(tether);
 
   final container = querySelector('#doc-content');
   final titleContainer = querySelector('#doc-title');
@@ -39,7 +33,10 @@ main() async {
   querySelectorAll('.dropdown').forEach((e) async {
     final button = e.querySelector('button');
     e.querySelectorAll('a').onClick.listen((_) => e.classes.remove('shown'));
-    final toggle = (_) => e.classes.toggle('shown');
+    final toggle = (Event _) {
+      _.stopImmediatePropagation();
+      e.classes.toggle('shown');
+    };
     button.onMouseUp.listen(toggle);
     button.onTouchEnd.listen(toggle);
   });

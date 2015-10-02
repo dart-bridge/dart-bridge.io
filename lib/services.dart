@@ -1,4 +1,4 @@
-library app_services;
+library services;
 /// This is the main bootstrapper library for the Bridge app.
 /// It's where the necessary Bridge components are imported
 /// alongside the application implementations
@@ -6,21 +6,12 @@ library app_services;
 
 /// Application entry
 import 'app.dart';
-import 'api/api.dart';
+import 'main/main.dart';
 
 /// Core libraries
 import 'dart:async';
 import 'dart:io';
-import 'package:bridge/core.dart';
-
-/// Components
-///
-/// Exported libraries can be accessed for service providers
-/// but not used locally. Importing allows for both.
-import 'package:bridge/http.dart';
-export 'package:bridge/database.dart';
-import 'package:bridge/view.dart';
-import 'package:bridge/tether.dart';
+import 'package:bridge/bridge.dart';
 
 /// External libraries
 import 'package:shelf/shelf.dart' as shelf;
@@ -29,6 +20,7 @@ import 'package:shelf/shelf.dart' as shelf;
 ///
 /// Remember that the service providers are explicitly registered
 /// in **config/app.yaml**
-part 'service_providers/api_service_provider.dart';
-part 'service_providers/docs_service_provider.dart';
+part 'service_providers/main_service_provider.dart';
 part 'service_providers/http_exceptions_service_provider.dart';
+part 'service_providers/commands_service_provider.dart';
+part 'service_providers/docs_service_provider.dart';

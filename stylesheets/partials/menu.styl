@@ -14,19 +14,19 @@
     &:before, &:after
       content ''
       display block
-      height 0.6em
+      height 0.3em
       width 3em
       background-color white
       position absolute
       left 0
       border-radius 0.3em
-      transform-origin 1.4em 0.3em
+      transform-origin 1.4em 0.15em
       transition transform 0.1s, background-color 0.1s
 
     &:before
-      top 0.5em
+      top 0.65em
     &:after
-      bottom 0.5em
+      bottom 0.65em
 
   &.shown
     button:before, button:after
@@ -40,6 +40,7 @@
     display none
 
   .menu
+    width 100%
     z-index 99
     position absolute
     box-sizing border-box
@@ -47,7 +48,8 @@
     box-shadow 0 0.3em 2em rgba(0,0,0,0.4)
     border-radius 0.3em
     background-color white
-    padding-top 4em
+    padding-top 1em
+    padding-bottom 1em
     margin-top -1em
 
     a

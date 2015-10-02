@@ -1,4 +1,4 @@
-part of app_services;
+part of services;
 
 class DocsServiceProvider implements ServiceProvider {
   Future setUp(Application app) async {

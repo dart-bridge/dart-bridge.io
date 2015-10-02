@@ -15,7 +15,6 @@ class Routes {
   ];
 }
 
-
 abstract class Route {
   final String title;
   final String url;

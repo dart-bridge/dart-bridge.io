@@ -4,7 +4,11 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.26.1+3"
+    version: "0.26.1+7"
+  ansicolor:
+    description: ansicolor
+    source: hosted
+    version: "0.0.9"
   args:
     description: args
     source: hosted
@@ -16,18 +20,34 @@ packages:
   barback:
     description: barback
     source: hosted
-    version: "0.15.2+6"
+    version: "0.15.2+7"
+  binary_declarations:
+    description: binary_declarations
+    source: hosted
+    version: "0.0.60"
+  binary_interop:
+    description: binary_interop
+    source: hosted
+    version: "0.0.32"
+  binary_types:
+    description: binary_types
+    source: hosted
+    version: "0.0.54"
   bridge:
     description:
       ref: develop
-      resolved-ref: e721f9a1e5cdcf06041c0fe35ea4575c8c16e3fb
+      resolved-ref: "62cb367efafef47097bc020ef9689c32408936c2"
       url: "https://github.com/dart-bridge/framework"
     source: git
-    version: "1.0.0-alpha6"
-  bson:
-    description: bson
+    version: "1.0.0-alpha7"
+  build_tools:
+    description: build_tools
     source: hosted
-    version: "0.1.23"
+    version: "0.0.15"
+  ccompilers:
+    description: ccompilers
+    source: hosted
+    version: "0.2.10"
   character_parser:
     description: character_parser
     source: hosted
@@ -36,10 +56,14 @@ packages:
     description: charcode
     source: hosted
     version: "1.1.0"
+  cli_util:
+    description: cli_util
+    source: hosted
+    version: "0.0.1+2"
   collection:
     description: collection
     source: hosted
-    version: "1.1.2"
+    version: "1.1.3"
   console:
     description: console
     source: hosted
@@ -47,7 +71,7 @@ packages:
   crypto:
     description: crypto
     source: hosted
-    version: "0.9.0"
+    version: "0.9.1"
   csslib:
     description: csslib
     source: hosted
@@ -55,7 +79,7 @@ packages:
   cupid:
     description: cupid
     source: hosted
-    version: "0.8.4"
+    version: "0.9.8"
   dlog:
     description: dlog
     source: hosted
@@ -64,10 +88,10 @@ packages:
     description: dotenv
     source: hosted
     version: "0.1.3+3"
-  fixnum:
-    description: fixnum
+  file_utils:
+    description: file_utils
     source: hosted
-    version: "0.10.2"
+    version: "0.0.23"
   formler:
     description: formler
     source: hosted
@@ -76,6 +100,14 @@ packages:
     description: glob
     source: hosted
     version: "1.0.5"
+  globbing:
+    description: globbing
+    source: hosted
+    version: "0.1.20"
+  grinder:
+    description: grinder
+    source: hosted
+    version: "0.7.2"
   html:
     description: html
     source: hosted
@@ -96,10 +128,38 @@ packages:
     description: jaded
     source: hosted
     version: "0.1.9"
+  libc:
+    description: libc
+    source: hosted
+    version: "0.0.10"
+  libffi6_extension:
+    description: libffi6_extension
+    source: hosted
+    version: "0.0.6"
+  libffi6_support:
+    description: libffi6_support
+    source: hosted
+    version: "0.0.1"
+  libffi_binaries:
+    description: libffi_binaries
+    source: hosted
+    version: "0.6.7"
+  lists:
+    description: lists
+    source: hosted
+    version: "0.0.21"
+  locking:
+    description: locking
+    source: hosted
+    version: "0.0.9"
   logging:
     description: logging
     source: hosted
     version: "0.9.3"
+  macro_processor:
+    description: macro_processor
+    source: hosted
+    version: "0.0.14"
   markdown:
     description: markdown
     source: hosted
@@ -112,18 +172,10 @@ packages:
     description: mime
     source: hosted
     version: "0.9.3"
-  mongo_dart:
-    description: mongo_dart
+  mockable_filesystem:
+    description: mockable_filesystem
     source: hosted
-    version: "0.1.47"
-  mongo_dart_query:
-    description: mongo_dart_query
-    source: hosted
-    version: "0.1.17"
-  more:
-    description: more
-    source: hosted
-    version: "1.4.0"
+    version: "0.0.3"
   node_shims:
     description: node_shims
     source: hosted
@@ -136,10 +188,18 @@ packages:
     description: package_config
     source: hosted
     version: "0.1.3"
+  parser_error:
+    description: parser_error
+    source: hosted
+    version: "0.0.1"
   path:
     description: path
     source: hosted
     version: "1.3.6"
+  patsubst:
+    description: patsubst
+    source: hosted
+    version: "0.0.9"
   plato:
     description: plato
     source: hosted
@@ -159,7 +219,7 @@ packages:
   pub_semver:
     description: pub_semver
     source: hosted
-    version: "1.2.1"
+    version: "1.2.2"
   quiver:
     description: quiver
     source: hosted
@@ -187,7 +247,15 @@ packages:
   source_span:
     description: source_span
     source: hosted
-    version: "1.2.0"
+    version: "1.2.1"
+  sqlite3_bindings:
+    description: sqlite3_bindings
+    source: hosted
+    version: "0.0.9"
+  sqlite3_driver:
+    description: sqlite3_driver
+    source: hosted
+    version: "0.0.4"
   sqljocky:
     description: sqljocky
     source: hosted
@@ -200,18 +268,38 @@ packages:
     description: string_scanner
     source: hosted
     version: "0.1.4"
+  supports_color:
+    description: supports_color
+    source: hosted
+    version: "0.1.1"
+  system_info:
+    description: system_info
+    source: hosted
+    version: "0.0.16"
   test:
     description: test
     source: hosted
-    version: "0.12.4+7"
+    version: "0.12.4+9"
+  text:
+    description: text
+    source: hosted
+    version: "0.0.7"
   trestle:
     description: trestle
     source: hosted
-    version: "0.1.1"
+    version: "0.5.4"
   unittest:
     description: unittest
     source: hosted
     version: "0.12.4"
+  unsafe_extension:
+    description: unsafe_extension
+    source: hosted
+    version: "0.0.19"
+  unscripted:
+    description: unscripted
+    source: hosted
+    version: "0.6.2"
   utf:
     description: utf
     source: hosted
@@ -224,7 +312,15 @@ packages:
     description: watcher
     source: hosted
     version: "0.9.7"
+  when:
+    description: when
+    source: hosted
+    version: "0.2.0"
+  which:
+    description: which
+    source: hosted
+    version: "0.1.3"
   yaml:
     description: yaml
     source: hosted
-    version: "2.1.4"
+    version: "2.1.6"
