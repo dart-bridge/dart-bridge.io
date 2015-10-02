@@ -29,6 +29,10 @@
       bottom 0.65em
 
   &.shown
+    button
+      position fixed
+      top 1em
+      right 1em
     button:before, button:after
       background-color red
     button:before
@@ -42,16 +46,21 @@
   .menu
     width 100%
     z-index 99
-    position absolute
+    position fixed
+    top 0
+    height 100%
     box-sizing border-box
     right 0
-    box-shadow 0 0.3em 2em rgba(0,0,0,0.4)
-    border-radius 0.3em
+    //box-shadow 0 0.3em 2em rgba(0,0,0,0.4)
+    //border-radius 0.3em
     background-color white
     padding-top 1em
     padding-bottom 1em
-    margin-top -1em
+    overflow-y scroll
+    -webkit-overflow-scrolling touch
 
     a
       display inline-block
-      padding(all: 1, right: 3, left: 3)
+      box-sizing border-box
+      width 100%
+      padding(all: 1, top: 0.6, bottom: 0.6)
