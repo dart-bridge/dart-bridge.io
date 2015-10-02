@@ -6,6 +6,7 @@ class Tapper {
   bool _active = false;
   bool _touch = false;
   bool _mouseEventIsBlocked = false;
+  Completer _unBlockMouseEventsCompleter;
 
   Tapper(Element this._element) {
     _startListening();
@@ -29,7 +30,7 @@ class Tapper {
     _touch = false;
   }
 
-  Future _onMouseUp(MouseEvent event) async {
+  void _onMouseUp(MouseEvent event) {
     if (_mouseEventIsBlocked) return;
     print('mouse fired');
     if (_active && !_touch)
@@ -44,7 +45,7 @@ class Tapper {
     _active = _touch = true;
   }
 
-  Future _onTouchEnd(TouchEvent event) async {
+  void _onTouchEnd(TouchEvent event) {
     print('touch fired');
     if (_active && _touch)
       _controller.add(event);
@@ -52,10 +53,15 @@ class Tapper {
   }
 
   Future _blockMouseEvent() async {
+    final completer = new Completer();
+    _unBlockMouseEventsCompleter = completer;
     _mouseEventIsBlocked = true;
     print('mouse blocked');
-    await new Future.delayed(const Duration(seconds: 2));
-    _mouseEventIsBlocked = false;
-    print('mouse un-blocked');
+    new Future.delayed(const Duration(seconds: 2)).then(completer.complete);
+    await completer.future;
+    if (_unBlockMouseEventsCompleter.isCompleted) {
+      _mouseEventIsBlocked = false;
+      print('mouse un-blocked');
+    }
   }
 }
