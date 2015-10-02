@@ -33,9 +33,13 @@ main() async {
   querySelectorAll('.dropdown').forEach((e) async {
     final button = e.querySelector('button');
     e.querySelectorAll('a').onClick.listen((_) => e.classes.remove('shown'));
-    final toggle = (Event _) {
-      _.stopImmediatePropagation();
+    var canToggle = true;
+    final toggle = (Event _) async {
+      if (!canToggle) return;
       e.classes.toggle('shown');
+      canToggle = false;
+      await new Future.delayed(const Duration(milliseconds: 400));
+      canToggle = true;
     };
     button.onMouseUp.listen(toggle);
     button.onTouchEnd.listen(toggle);
