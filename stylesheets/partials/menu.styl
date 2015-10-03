@@ -48,15 +48,16 @@
   z-index layer-menu
   box-sizing border-box
 
+  @media (min-width 40em)
+    &.no-menu
+      display none
+
   a
     display inline-block
     box-sizing border-box
     width 100%
     padding(all: 1, top: 0.6, bottom: 0.6)
     transition background-color 0.07s ease-out, color 0.07s ease-out
-    &:hover
-      background-color red
-      color white
 
   .category > span
     display block
