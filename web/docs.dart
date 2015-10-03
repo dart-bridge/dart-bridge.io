@@ -27,8 +27,7 @@ main() async {
 
   querySelectorAll('.dropdown').forEach((e) async {
     final button = e.querySelector('button');
-    e.querySelectorAll('a').onClick
-        .listen((_) => e.classes.remove('shown'));
+    new Tapper(e.querySelector('a')).stream.listen((_) => e.classes.remove('shown'));
     final toggle = (_) => e.classes.toggle('shown');
     new Tapper(button).stream.listen(toggle);
   });

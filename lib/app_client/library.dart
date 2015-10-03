@@ -3,6 +3,7 @@ library app;
 
 import 'dart:html';
 import 'dart:async';
+import 'dart:js';
 
 // The shared application library
 import '../app_shared/library.dart';
