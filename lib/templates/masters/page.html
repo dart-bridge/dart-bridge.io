@@ -1,0 +1,10 @@
+@extends ('masters.app')
+
+@block ('content')
+  <header class="page-header color-${headerColor ?? 'dark'}">
+    @block ('page-header')
+  </header>
+  <article class="choke">
+    @block ('page-content')
+  </article>
+@end block

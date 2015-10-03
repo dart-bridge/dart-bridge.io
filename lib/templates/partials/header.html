@@ -21,28 +21,24 @@
 <div class="choke">
   <ul class="menu-master alpha">
     <ul class="menu-narrow beta">
-      <li class='${area == "docs" ? "active" : ""}'><a href="/docs">Docs</a></li>
-      <li class='${area == "resources" ? "active" : ""}'><a href="/resources">Resources</a></li>
+      <li class='${area == "docs" ? "active" : ""}'>
+        <a href="/docs">Docs</a>
+      </li>
+      <li class='${area == "resources" ? "active" : ""}'>
+        <a href="/resources">Resources</a>
+      </li>
     </ul>
-    <ul class="menu-master gamma">
-      @if (area == 'docs')
-        @for (category in docRoutes.keys)
+    @if (menu != null)
+      <ul class="menu-master gamma">
+        @for (category in menu.keys)
           <ul class="menu-master category">
             <span>$category</span>
-            @for (route in docRoutes[category])
+            @for (route in menu[category])
               <li><a href="${route.url}">${route.title}</a></li>
             @end for
           </ul>
         @end for
-      @else if (area == 'resources')
-        <li><a href="/docs">Some page</a></li>
-        <li><a href="/docs">Some page</a></li>
-        <li><a href="/docs">Some page</a></li>
-        <li><a href="/docs">Some page</a></li>
-        <li><a href="/docs">Some page</a></li>
-        <li><a href="/docs">Some page</a></li>
-        <li><a href="/docs">Some page</a></li>
-      @end if
-    </ul>
+      </ul>
+    @end if
   </ul>
 </div>

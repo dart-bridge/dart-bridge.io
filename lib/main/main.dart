@@ -2,7 +2,7 @@ library main;
 
 import 'dart:async';
 
-import 'package:bridge/bridge.dart';
+import 'package:bridge/bridge.dart' hide Route;
 import '../app.dart';
 
 /// Controllers
@@ -30,9 +30,10 @@ class Main {
       for (final docRoute in docRoutes)
         router.get(docRoute.url, () async =>
             template('doc').withScript('docs')
+              ..headerColor = 'blue'
               ..area = 'docs'
               ..docRoute = docRoute
-              ..docRoutes = routes.docs);
+              ..menu = routes.docs);
     });
   }
 

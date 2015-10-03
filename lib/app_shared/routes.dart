@@ -21,7 +21,7 @@ class Routes {
   };
 }
 
-abstract class Route {
+class Route {
   final String title;
   final String url;
 

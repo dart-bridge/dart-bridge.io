@@ -7,11 +7,16 @@
     position relative
 
 .page-header
-  background-color light
   color white
   padding(top: 10, bottom: 3, left: 0, right: 0)
   h1
     padding(left: 1, right: 1)
+  &.color-dark
+    background-color dark
+  &.color-red
+    background-color red
+  &.color-blue
+    background-color blue
 
 .page-header ~ article
   padding-top px(paragraph-spacing)

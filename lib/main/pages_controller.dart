@@ -11,12 +11,93 @@ class PagesController {
 
   docs(Routes routes) {
     return template('docs').withScript('docs')
+      ..headerColor = 'blue'
       ..area = 'docs'
-      ..docRoutes = routes.docs;
+      ..menu = routes.docs;
   }
 
   resources() {
     return template('resources').withScript('generic')
-      ..area = 'resources';
+      ..headerColor = 'red'
+      ..area = 'resources'
+      ..menu = {
+        'Category': [
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+          const Route('/', 'Home'),
+        ]
+      };
   }
 }

@@ -91,7 +91,9 @@ h6
   line-height 0.9
 
 article
-  padding(all: 1)
+  padding 1
+  @media (min-width 40em)
+    padding(right: menu-width + 3)
   ul, ol
     font-family adobe-text-pro
     line-height 1.3

@@ -1,3 +1,7 @@
+.main-header, .menu-master
+  li.active
+    background-color transparentify(blue, 3%)
+
 .main-header
 
   .menu-narrow.alpha
@@ -27,8 +31,9 @@
       &:after
         bottom 2.15em
 
-body:not(.menu-open) .menu-master
-  display none
+@media (max-width 39.99999999999em)
+  body:not(.menu-open) .menu-master
+    display none
 
 .menu-master.alpha
   position fixed
@@ -82,11 +87,11 @@ body:not(.menu-open) .menu-master
   .menu-wide, .menu-master.alpha .menu-wide
     display none
 
-html.backdrop-filter .main-header .menu-master.alpha
-  background-color rgba(250, 250, 250, .73)
+html.backdrop-filter .menu-master.alpha
+  background-color rgba(250, 250, 250, .8)
 
 body.menu-open
-  overflow hidden
+  overflow-y hidden
 
   .main-header .menu-narrow.alpha
     button:before, button:after
@@ -95,69 +100,15 @@ body.menu-open
       transform translateY(0.61em) rotate(45deg)
     button:after
       transform translateY(-0.61em) rotate(-45deg)
-//.dropdown
-//  float right
-//  margin(right: 1)
-//
-//  button
-//    height 3em
-//    width 3em
-//    background transparent
-//    border none
-//    position relative
-//    z-index 100
-//    float right
-//
-//    &:before, &:after
-//      content ''
-//      display block
-//      height 0.3em
-//      width 3em
-//      background-color white
-//      position absolute
-//      left 0
-//      border-radius 0.3em
-//      transform-origin 1.4em 0.15em
-//      transition transform 0.1s, background-color 0.1s
-//
-//    &:before
-//      top 0.65em
-//    &:after
-//      bottom 0.65em
-//
-//  &.shown
-//    button
-//      position fixed
-//      top 1em
-//      right 1em
-//    button:before, button:after
-//      background-color red
-//    button:before
-//      transform translateY(0.65em) rotate(45deg)
-//    button:after
-//      transform translateY(-0.65em) rotate(-45deg)
-//
-//  &:not(.shown) > .menu
-//    display none
-//
-//  .menu
-//    width 100%
-//    z-index 99
-//    position fixed
-//    top 0
-//    height 100%
-//    box-sizing border-box
-//    right 0
-//    //box-shadow 0 0.3em 2em rgba(0,0,0,0.4)
-//    //border-radius 0.3em
-//    background-color white
-//    padding-top 1em
-//    padding-bottom 1em
-//    overflow-y scroll
-//    -webkit-overflow-scrolling touch
-//
-//    a
-//      display inline-block
-//      box-sizing border-box
-//      width 100%
-//      padding(all: 1, top: 0.6, bottom: 0.6)
+
+@media(min-width 40em)
+  .menu-master.alpha
+    position absolute
+    right px(1)
+    right rem(1)
+    top 10.8em
+    width px(menu-width)
+    width rem(menu-width)
+    overflow auto
+    height auto
+    padding(all: 1, top: 0.1)

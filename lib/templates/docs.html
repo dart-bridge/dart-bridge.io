@@ -1,15 +1,13 @@
-@extends ('app')
+@extends ('masters.page')
 
-@block ('content')
-<div class="page-header">
+@block ('page-header')
   <h1 class="choke" id='doc-title'>
     Documentation
   </h1>
-</div>
+@end block
 
-<article class='choke'>
+@block ('page-content')
   <div id="doc-content">
     Docs
   </div>
-</article>
 @end block

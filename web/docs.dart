@@ -21,6 +21,8 @@ main() async {
   routes.docs.forEach((category, docRoutes) async {
     for (final docRoute in docRoutes)
       router.on(docRoute.url).listen((m) async {
+        titleContainer.setInnerHtml('&nbsp;');
+        container.setInnerHtml('Loading...');
         container.setInnerHtml(await docRoute.doc(), validator: validator);
         titleContainer.text = docRoute.title;
       });
