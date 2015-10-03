@@ -3,7 +3,7 @@ part of app.shared;
 typedef Future<String> DocGenerator();
 
 class Routes {
-  DocRequester _docs;
+  final DocRequester _docs;
 
   Routes(DocRequester this._docs);
 
@@ -16,7 +16,43 @@ class Routes {
     ],
     'bridge.core': [
       new DocRoute('bridge.core',
-          'bridge.core', () => _docs.get('core/index')),
+          'Overview', () => _docs.get('core/index')),
+    ],
+    'bridge.cli': [
+      new DocRoute('bridge.cli',
+          'Overview', () => _docs.get('cli/index')),
+    ],
+    'bridge.http': [
+      new DocRoute('bridge.http',
+          'Overview', () => _docs.get('http/index')),
+    ],
+    'bridge.database': [
+      new DocRoute('bridge.database',
+          'Overview', () => _docs.get('database/index')),
+    ],
+    'bridge.tether': [
+      new DocRoute('bridge.tether',
+          'Overview', () => _docs.get('tether/index')),
+    ],
+    'bridge.view': [
+      new DocRoute('bridge.view',
+          'Overview', () => _docs.get('view/index')),
+    ],
+    'bridge.transport': [
+      new DocRoute('bridge.transport',
+          'Overview', () => _docs.get('transport/index')),
+    ],
+    'bridge.events': [
+      new DocRoute('bridge.events',
+          'Overview', () => _docs.get('events/index')),
+    ],
+    'bridge.validation': [
+      new DocRoute('bridge.validation',
+          'Overview', () => _docs.get('validation/index')),
+    ],
+    'bridge.exceptions': [
+      new DocRoute('bridge.exceptions',
+          'Overview', () => _docs.get('exceptions/index')),
     ],
   };
 }
