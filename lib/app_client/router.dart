@@ -35,6 +35,8 @@ class Router {
       if (matcher.hasMatch(uri))
         return _updateListeners(matcher.firstMatch(uri), _routes[matcher]);
     }
+    if (window.location.pathname != uri)
+      window.location.assign(uri);
   }
 
   void _updateListeners(Match match, List<StreamController<Match>> listeners) {
