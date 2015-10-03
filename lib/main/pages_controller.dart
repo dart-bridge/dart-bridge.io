@@ -10,10 +10,13 @@ class PagesController {
   }
 
   docs(Routes routes) {
-    return template('docs').withScript('docs')
-      ..headerColor = 'blue'
-      ..area = 'docs'
-      ..menu = routes.docs;
+    return redirect('docs/installation');
+  }
+
+  download() {
+    return template('download').withScript('generic')
+      ..headerColor = 'red'
+      ..area = 'download';
   }
 
   resources() {
@@ -22,7 +25,7 @@ class PagesController {
       ..area = 'resources'
       ..menu = {
         'Category': [
-          const Route('/', 'Home'),
+          const Route('#hej', 'Home'),
           const Route('/', 'Home'),
           const Route('/', 'Home'),
           const Route('/', 'Home'),

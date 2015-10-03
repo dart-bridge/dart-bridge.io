@@ -23,7 +23,7 @@
     </script>
   </head>
 
-  <body class='area-${area ?? "generic"}'>
+  <body class='area-${area ?? "generic"} ${menu == null ? "no-menu" : "has-menu"}'>
     @include ('partials.header')
     @block ('content')
     <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
