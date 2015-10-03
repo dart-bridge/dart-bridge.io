@@ -1,5 +1,6 @@
 import 'dart:html';
 import 'dart:async';
+import 'package:app/client.dart';
 
 class HomePresentation {
   final List<Element> _sections = querySelectorAll('section').toList();
@@ -28,4 +29,6 @@ class HomePresentation {
 
 main() {
   new HomePresentation();
+  anchorEvents(new Router());
+  menu();
 }

@@ -11,7 +11,7 @@ class Tapper {
     _startListening();
   }
 
-  Stream<UIEvent> get stream => _controller.stream;
+  Stream<JsObject> get stream => _controller.stream;
 
   void _startListening() {
     _hammer.callMethod('on', ['tap',_onTap]);

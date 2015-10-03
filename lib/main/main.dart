@@ -24,12 +24,15 @@ class Main {
     router.get('/', controller.index).named('index');
 
     router.get('docs', controller.docs).named('docs');
+    router.get('resources', controller.resources).named('resources');
 
-    routes.docs.forEach((docRoute) {
-      router.get(docRoute.url, () async =>
-          template('doc').withScript('docs')
-            ..docRoute = docRoute
-            ..docRoutes = routes.docs);
+    routes.docs.forEach((category, docRoutes) {
+      for (final docRoute in docRoutes)
+        router.get(docRoute.url, () async =>
+            template('doc').withScript('docs')
+              ..area = 'docs'
+              ..docRoute = docRoute
+              ..docRoutes = routes.docs);
     });
   }
 

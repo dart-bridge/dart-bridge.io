@@ -5,10 +5,18 @@ part of main;
 /// in the methods.
 class PagesController {
   index() {
-    return template('index').withScript('home');
+    return template('index').withScript('home')
+      ..area = 'home';
   }
 
-  docs() {
-    return template('docs');
+  docs(Routes routes) {
+    return template('docs').withScript('docs')
+      ..area = 'docs'
+      ..docRoutes = routes.docs;
+  }
+
+  resources() {
+    return template('resources').withScript('generic')
+      ..area = 'resources';
   }
 }

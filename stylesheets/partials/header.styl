@@ -3,9 +3,11 @@
   max-width rem(60)
   margin auto
   box-sizing border-box
+  @media (min-width 40em)
+    position relative
 
 .page-header
-  background-color #232323
+  background-color light
   color white
   padding(top: 10, bottom: 3, left: 0, right: 0)
   h1
@@ -21,41 +23,42 @@ html.backdrop-filter .main-header
 .main-header
   display inline-block
   width 100%
-  background-color rgba(250, 250, 250, .80)
+  background-color rgba(250, 250, 250, .95)
+  z-index layer-header
+  position fixed
+  -webkit-backdrop-filter: blur(15px)
 
-  @media (min-width 40em)
-    position fixed
-    z-index 10000
-    -webkit-backdrop-filter: blur(15px)
+  .toolbar
+    position relative
+    z-index layer-header
 
-  .right, .left
-    padding(left: 0.3, right: 0.3)
+    .right, .left
+      padding(left: 0.3, right: 0.3)
 
-  .right
-    float right
-  .left
-    float left
+    .right
+      float right
+    .left
+      float left
 
-  li
-    float left
+    li
+      float left
 
-  li.img-container img, li a
-    display inline-block
-    float left
+    li.img-container img, li a
+      display inline-block
+      float left
 
-  li.img-container img
-    width 2.4em * 2.5
-    height 2.4em
-    padding(top: 1, bottom: 1, left: 0.7, right: 0.7)
+    li.img-container img
+      width 2.4em * 2.5
+      height 2.4em
+      padding(top: 1, bottom: 1, left: 0.7, right: 0.7)
 
-  .right li a
-    font-size 1
-    text-transform uppercase
-    font-weight bold
-    letter-spacing 0.05em
-    padding(all: 1.7, left: 0.7, right: 0.7)
-    transition color 0.2s
+    .right li a
+      font-size 1
+      text-transform uppercase
+      font-weight bold
+      letter-spacing 0.05em
+      padding(all: 1.7, left: 0.7, right: 0.7)
+      transition color 0.2s
 
-@media (min-width 40em)
-  article
-    padding-top 5em
+article
+  padding-top 5em

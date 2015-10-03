@@ -11,26 +11,21 @@ main() async {
   await globalTether();
   final router = new Router();
   anchorEvents(router);
-
+  menu();
 
   final container = querySelector('#doc-content');
   final titleContainer = querySelector('#doc-title');
   final validator = new NodeValidatorBuilder.common()
     ..allowNavigation(new SiteUriPolicy());
 
-  routes.docs.forEach((docRoute) async {
-    router.on(docRoute.url).listen((m) async {
-      container.setInnerHtml(await docRoute.doc(), validator: validator);
-      titleContainer.text = docRoute.title;
-    });
+  routes.docs.forEach((category, docRoutes) async {
+    for (final docRoute in docRoutes)
+      router.on(docRoute.url).listen((m) async {
+        container.setInnerHtml(await docRoute.doc(), validator: validator);
+        titleContainer.text = docRoute.title;
+      });
   });
 
-  querySelectorAll('.dropdown').forEach((e) async {
-    final button = e.querySelector('button');
-    new Tapper(e.querySelector('a')).stream.listen((_) => e.classes.remove('shown'));
-    final toggle = (_) => e.classes.toggle('shown');
-    new Tapper(button).stream.listen(toggle);
-  });
 }
 
 Routes routes = new Routes(new ClientDocRequester());

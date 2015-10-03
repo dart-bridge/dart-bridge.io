@@ -2,49 +2,6 @@
 
 @block ('content')
   <div class="page-header">
-    <div class="choke">
-      <div class="dropdown">
-        <button></button>
-        <ul class='menu'>
-          @for (docRoute in docRoutes)
-          <li>
-            <a href='${docRoute.url}'>${docRoute.title}</a>
-          </li>
-          @end for
-          <li>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-            <a href='#'>Something</a>
-          </li>
-        </ul>
-      </div>
-    </div>
     <h1 class="choke" id='doc-title'>
       ${docRoute.title}
     </h1>
@@ -52,7 +9,6 @@
 
   <article class='choke'>
     <div id="doc-content">
-
       ${await docRoute.doc()}
     </div>
   </article>
