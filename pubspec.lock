@@ -75,7 +75,7 @@ packages:
   cupid:
     description: cupid
     source: hosted
-    version: "0.9.8"
+    version: "0.9.9"
   dlog:
     description: dlog
     source: hosted
