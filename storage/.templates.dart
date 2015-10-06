@@ -136,6 +136,7 @@ yield '''        htmlEl.className = htmlEl.className''';
 yield '''            .replace('no-backdrop-filter', 'backdrop-filter');''';
 yield '''    </script>''';
 yield '''    <link rel='stylesheet' href='/app.css'>''';
+yield '''    <link rel='apple-touch-icon' href='/apple-touch-icon.png'>''';
 yield '''    <script src='//use.typekit.net/dcz8uda.js'></script>''';
 yield '''    <script>''';
 yield '''      try {''';
