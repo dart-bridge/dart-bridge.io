@@ -17,7 +17,7 @@ class Router {
   Stream<Match> on(String pattern) {
     final controller = new StreamController<Match>();
     final List<StreamController<Match>> listeners =
-    _routes[new RegExp(r'^$''$pattern'r'\/?$')] ??= [];
+    _routes[new RegExp('$pattern\$')] ??= [];
 
     listeners.add(controller);
     return controller.stream;
