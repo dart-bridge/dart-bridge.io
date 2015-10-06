@@ -50,10 +50,14 @@ yield* $extends('masters.app', {
 yield '''  <section id="main">''';
 yield '''    <div class="copy">''';
 yield '''      <h1>''';
-yield '''        A web app framework that feels''';
-yield '''        <img src="/img/magical.png" alt="magical" class="emoji">''';
-yield '''        and makes you''';
-yield '''        <img src="/img/cool.png" alt="cool" class="emoji">.''';
+yield '''        The web framework that goes''';
+yield '''        <span class="no-break">''';
+yield '''          all <img src="/img/magical.png" alt="magical" class="emoji">''';
+yield '''        </span>''';
+yield '''        and then you're''';
+yield '''        <span class="no-break">''';
+yield '''          like <img src="/img/cool.png" alt="cool" class="emoji">.''';
+yield '''        </span>''';
 yield '''      </h1>''';
 
 yield '''      <p>''';
@@ -175,7 +179,7 @@ yield '''          <a href='/'><img src="/img/logo.svg" alt="Bridge"></a>''';
 yield '''        </li>''';
 yield '''      </ul>''';
 yield '''      <ul class="right menu-wide beta">''';
-yield '''        <li class='${$esc(area == "download" ? "active" : "")}'><a href="/docs/installation">Download</a></li>''';
+yield '''        <li class='${$esc(area == "download" ? "active" : "")}'><a href="/download">Download</a></li>''';
 yield '''        <li class='${$esc(area == "docs" ? "active" : "")}'><a href="/docs">Docs</a></li>''';
 
 yield '''      </ul>''';
@@ -191,7 +195,7 @@ yield '''<div class="choke">''';
 yield '''  <ul class="menu-master alpha ${$esc(menu == null ? 'no-menu' : '')}">''';
 yield '''    <ul class="menu-narrow beta">''';
 yield '''      <li>''';
-yield '''        <a href="/docs/installation">Download</a>''';
+yield '''        <a href="/download">Download</a>''';
 yield '''      </li>''';
 yield '''      <li class='${$esc(area == "docs" ? "active" : "")}'>''';
 yield '''        <a href="/docs">Docs</a>''';
