@@ -13,12 +13,6 @@ class PagesController {
     return redirect('docs/installation');
   }
 
-  download() {
-    return template('download').withScript('generic')
-      ..headerColor = 'red'
-      ..area = 'download';
-  }
-
   resources() {
     return template('resources').withScript('generic')
       ..headerColor = 'red'

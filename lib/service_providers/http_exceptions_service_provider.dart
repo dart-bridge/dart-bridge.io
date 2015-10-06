@@ -18,7 +18,7 @@ class HttpExceptionsServiceProvider implements ServiceProvider {
       'stackTrace': stack,
       'message': 'Oops! That page wasn\'t found!',
       'code': 404,
-    }));
+    }).withScript('generic'));
   }
 
   Future<shelf.Response> globalHandler(Exception exception, StackTrace stack) async {
@@ -26,7 +26,7 @@ class HttpExceptionsServiceProvider implements ServiceProvider {
       'exception': exception,
       'stackTrace': stack,
       'code': 500,
-    }));
+    }).withScript('generic'));
   }
 
   /// Turns a [Template] containing a 'code' integer field in the
@@ -34,7 +34,7 @@ class HttpExceptionsServiceProvider implements ServiceProvider {
   shelf.Response errorTemplate(Template template) {
     return new shelf.Response(
         template.data.containsKey('code') ? template.data['code'] : 500,
-        body: template.parsed,
+        body: template.encoded,
         headers: {
           'Content-Type': ContentType.HTML.toString()
         });

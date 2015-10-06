@@ -8,7 +8,7 @@ yield '''  </h1>''';
 
 'page-content': () async* {
 yield '''  <div id="doc-content">''';
-yield '''    ${$esc(await docRoute.doc())}''';
+yield '''    ${await docRoute.doc()}''';
 yield '''  </div>''';
 },
 

@@ -12,7 +12,7 @@
     // Include the stack trace only if we're in a development environment
     @if (Environment.isDevelopment && stackTrace != null)
       <h6>$exception</h6>
-      <pre class='stack-trace'><code>${$escape(new Chain.forTrace(stackTrace).terse.toString())}</code></pre>
+      <pre class='stack-trace'><code>${new Chain.forTrace(stackTrace).terse}</code></pre>
     @end if
   </article>
 @end block

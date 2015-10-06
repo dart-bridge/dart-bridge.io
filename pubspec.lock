@@ -36,7 +36,7 @@ packages:
   bridge:
     description:
       ref: develop
-      resolved-ref: "09b04924088a2cb323e5a16e6980ee66a59b2b7a"
+      resolved-ref: "27b36e44d5bdc10225b13e1c5e7e834ce2566b1d"
       url: "https://github.com/dart-bridge/framework"
     source: git
     version: "1.0.0-alpha7"

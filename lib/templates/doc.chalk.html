@@ -8,6 +8,6 @@
 
 @start block ('page-content')
   <div id="doc-content">
-    ${await docRoute.doc()}
+    $!!{await docRoute.doc()}
   </div>
 @end block

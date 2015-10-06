@@ -13,28 +13,8 @@ yield '''  </h1>''';
 
 'page-content': () async* {
 yield '''  <div id="doc-content">''';
-yield '''    ${$esc(await docRoute.doc())}''';
+yield '''    ${await docRoute.doc()}''';
 yield '''  </div>''';
-},
-
-});
-
-},
-'download': () async* {
-yield* $extends('masters.page', {
-
-'page-header': () async* {
-yield '''  <h1 class="choke" id='doc-title'>''';
-yield '''    Download''';
-yield '''  </h1>''';
-},
-
-'page-content': () async* {
-yield '''  <p class="lead">''';
-yield '''    For Bridge to work, you need to download and install both the Dart SDK, and the Bridge Installer. There are no''';
-yield '''    direct downloads. Instead, check out the documentation for a <a href="/docs/installation">step-by-step guide</a>''';
-yield '''    how to install Bridge.''';
-yield '''  </p>''';
 },
 
 });
@@ -55,7 +35,7 @@ yield '''    </h3>''';
 
 yield* $if([[Environment.isDevelopment && stackTrace != null, () async* {
 yield '''      <h6>${$esc(exception)}</h6>''';
-yield '''      <pre class='stack-trace'><code>${$esc($escape($new(#Chain.forTrace)(stackTrace).terse.toString()))}</code></pre>''';
+yield '''      <pre class='stack-trace'><code>${$esc($new(#Chain.forTrace)(stackTrace).terse)}</code></pre>''';
 }]]);
 yield '''  </article>''';
 },
@@ -195,7 +175,7 @@ yield '''          <a href='/'><img src="/img/logo.svg" alt="Bridge"></a>''';
 yield '''        </li>''';
 yield '''      </ul>''';
 yield '''      <ul class="right menu-wide beta">''';
-yield '''        <li class='${$esc(area == "download" ? "active" : "")}'><a href="/download">Download</a></li>''';
+yield '''        <li class='${$esc(area == "download" ? "active" : "")}'><a href="/docs/installation">Download</a></li>''';
 yield '''        <li class='${$esc(area == "docs" ? "active" : "")}'><a href="/docs">Docs</a></li>''';
 
 yield '''      </ul>''';
@@ -210,8 +190,8 @@ yield '''</header>''';
 yield '''<div class="choke">''';
 yield '''  <ul class="menu-master alpha ${$esc(menu == null ? 'no-menu' : '')}">''';
 yield '''    <ul class="menu-narrow beta">''';
-yield '''      <li class='${$esc(area == "download" ? "active" : "")}'>''';
-yield '''        <a href="/download">Download</a>''';
+yield '''      <li>''';
+yield '''        <a href="/docs/installation">Download</a>''';
 yield '''      </li>''';
 yield '''      <li class='${$esc(area == "docs" ? "active" : "")}'>''';
 yield '''        <a href="/docs">Docs</a>''';

@@ -24,7 +24,7 @@ class Main {
     router.get('/', controller.index).named('index');
 
     router.get('docs', controller.docs).named('docs');
-    router.get('download', controller.download).named('download');
+//    router.get('download', controller.download).named('download');
 //    router.get('resources', controller.resources).named('resources');
 
     routes.docs.forEach((category, docRoutes) {
