@@ -12,11 +12,17 @@ class Routes {
   Map<String, List<DocRoute>> get docs => __docs ??= {
     'Getting Started': [
       new DocRoute('installation',
-          'Installation', () => _docs.get('installation')),
+          'Installation', () => _docs.get('tour/installation')),
+      new DocRoute('hello-world',
+          'Hello World', () => _docs.get('tour/hello-world')),
     ],
     'bridge.core': [
       new DocRoute('bridge.core',
           'Overview', () => _docs.get('core/index')),
+      new DocRoute('bridge.core/service-container',
+          'Service Container', () => _docs.get('core/service-container')),
+      new DocRoute('bridge.core/service-provider',
+          'Service Provider', () => _docs.get('core/service-provider')),
     ],
     'bridge.cli': [
       new DocRoute('bridge.cli',
@@ -37,6 +43,8 @@ class Routes {
     'bridge.view': [
       new DocRoute('bridge.view',
           'Overview', () => _docs.get('view/index')),
+      new DocRoute('bridge.view/chalk',
+          'Chalk Templates', () => _docs.get('view/chalk')),
     ],
     'bridge.transport': [
       new DocRoute('bridge.transport',
