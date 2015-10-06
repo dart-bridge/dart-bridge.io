@@ -1,0 +1,69 @@
+yield* $extends('masters.app', {
+
+'content': () async* {
+yield '''  <section id="main">''';
+yield '''    <div class="copy">''';
+yield '''      <h1>''';
+yield '''        A web app framework that feels''';
+yield '''        <img src="/img/magical.png" alt="magical" class="emoji">''';
+yield '''        and makes you''';
+yield '''        <img src="/img/cool.png" alt="cool" class="emoji">.''';
+yield '''      </h1>''';
+
+yield '''      <p>''';
+yield '''        Bridge is a full stack modular web framework for Dart,''';
+yield '''        with clarity and agility in mind.''';
+yield '''      </p>''';
+yield '''    </div>''';
+yield '''    <img class='figure' src="/img/welcome_controller.png">''';
+yield '''  </section>''';
+
+yield '''  <section id="realtime">''';
+yield '''    <div class="copy">''';
+yield '''      <h1>Realtime</h1>''';
+
+yield '''      <p>''';
+yield '''        Interact with your running application live,''';
+yield '''        from the command line shell instance.''';
+yield '''      </p>''';
+yield '''    </div>''';
+yield '''    <img class='figure' src="/img/cli.png">''';
+yield '''  </section>''';
+
+yield '''  <section id="fast-modern">''';
+yield '''    <div class="copy">''';
+yield '''      <h1>Fast &amp; Modern</h1>''';
+
+yield '''      <p>''';
+yield '''        Templates and API that’s made for the modern web.''';
+yield '''        Automagic pre-compilation for <span class="pale-red">blazing</span> speed.''';
+yield '''      </p>''';
+yield '''    </div>''';
+yield '''    <img class='figure' src="/img/templating.png">''';
+yield '''  </section>''';
+
+yield '''  <section id="end-to-end">''';
+yield '''    <div class="copy">''';
+yield '''      <h1>End-to-end</h1>''';
+
+yield '''      <p>''';
+yield '''        Connected with WebSockets through the Tether.''';
+yield '''        It’s what we wished XHR would be like.''';
+yield '''      </p>''';
+yield '''    </div>''';
+yield '''    <img class='figure' src="/img/tether.png">''';
+yield '''  </section>''';
+
+yield '''  <section id="get-started">''';
+yield '''    <div class="copy">''';
+yield '''      <h1>Get started!</h1>''';
+
+yield '''      <p>''';
+yield '''        Are you ready to try Bridge out?''';
+yield '''      </p>''';
+yield '''      <a href='/docs/installation'>Jump in</a>''';
+yield '''    </div>''';
+yield '''  </section>''';
+},
+
+});

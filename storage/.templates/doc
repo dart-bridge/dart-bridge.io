@@ -1,0 +1,15 @@
+yield* $extends('masters.page', {
+
+'page-header': () async* {
+yield '''  <h1 class="choke" id='doc-title'>''';
+yield '''    ${$esc(docRoute.title)}''';
+yield '''  </h1>''';
+},
+
+'page-content': () async* {
+yield '''  <div id="doc-content">''';
+yield '''    ${$esc(await docRoute.doc())}''';
+yield '''  </div>''';
+},
+
+});

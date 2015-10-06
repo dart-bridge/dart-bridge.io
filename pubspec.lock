@@ -36,7 +36,7 @@ packages:
   bridge:
     description:
       ref: develop
-      resolved-ref: "62cb367efafef47097bc020ef9689c32408936c2"
+      resolved-ref: "09b04924088a2cb323e5a16e6980ee66a59b2b7a"
       url: "https://github.com/dart-bridge/framework"
     source: git
     version: "1.0.0-alpha7"
@@ -48,10 +48,6 @@ packages:
     description: ccompilers
     source: hosted
     version: "0.2.10"
-  character_parser:
-    description: character_parser
-    source: hosted
-    version: "0.1.3"
   charcode:
     description: charcode
     source: hosted
@@ -124,10 +120,6 @@ packages:
     description: http_server
     source: hosted
     version: "0.9.5+1"
-  jaded:
-    description: jaded
-    source: hosted
-    version: "0.1.9"
   libc:
     description: libc
     source: hosted
@@ -160,10 +152,6 @@ packages:
     description: macro_processor
     source: hosted
     version: "0.0.14"
-  markdown:
-    description: markdown
-    source: hosted
-    version: "0.7.2"
   matcher:
     description: matcher
     source: hosted
@@ -176,10 +164,6 @@ packages:
     description: mockable_filesystem
     source: hosted
     version: "0.0.3"
-  node_shims:
-    description: node_shims
-    source: hosted
-    version: "0.1.3"
   options_file:
     description: options_file
     source: hosted

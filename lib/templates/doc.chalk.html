@@ -1,12 +1,12 @@
 @extends ('masters.page')
 
-@block ('page-header')
+@start block ('page-header')
   <h1 class="choke" id='doc-title'>
     ${docRoute.title}
   </h1>
 @end block
 
-@block ('page-content')
+@start block ('page-content')
   <div id="doc-content">
     ${await docRoute.doc()}
   </div>

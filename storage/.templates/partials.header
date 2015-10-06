@@ -1,0 +1,49 @@
+yield '''<header class='main-header'>''';
+yield '''  <div class="choke">''';
+yield '''    <ul class="toolbar">''';
+yield '''      <ul class="left">''';
+yield '''        <li class="img-container">''';
+yield '''          <a href='/'><img src="/img/logo.svg" alt="Bridge"></a>''';
+yield '''        </li>''';
+yield '''      </ul>''';
+yield '''      <ul class="right menu-wide beta">''';
+yield '''        <li class='${$esc(area == "download" ? "active" : "")}'><a href="/download">Download</a></li>''';
+yield '''        <li class='${$esc(area == "docs" ? "active" : "")}'><a href="/docs">Docs</a></li>''';
+
+yield '''      </ul>''';
+yield '''      <ul class="right menu-narrow alpha">''';
+yield '''        <li>''';
+yield '''          <button class='menu-toggle'></button>''';
+yield '''        </li>''';
+yield '''      </ul>''';
+yield '''    </ul>''';
+yield '''  </div>''';
+yield '''</header>''';
+yield '''<div class="choke">''';
+yield '''  <ul class="menu-master alpha ${$esc(menu == null ? 'no-menu' : '')}">''';
+yield '''    <ul class="menu-narrow beta">''';
+yield '''      <li class='${$esc(area == "download" ? "active" : "")}'>''';
+yield '''        <a href="/download">Download</a>''';
+yield '''      </li>''';
+yield '''      <li class='${$esc(area == "docs" ? "active" : "")}'>''';
+yield '''        <a href="/docs">Docs</a>''';
+yield '''      </li>''';
+
+
+
+yield '''    </ul>''';
+yield* $if([[menu != null, () async* {
+yield '''      <ul class="menu-master gamma">''';
+yield* $for(menu.keys, (category) async* {
+yield '''          <ul class="menu-master category">''';
+yield '''            <span>${$esc(category)}</span>''';
+yield* $for(menu[category], (route) async* {
+yield '''              <li><a href="${$esc(route.url)}">${$esc(route.title)}</a></li>''';
+});
+yield '''          </ul>''';
+});
+yield '''      </ul>''';
+}]]);
+yield '''  </ul>''';
+yield '''</div>''';
+
