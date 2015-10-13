@@ -10,3 +10,7 @@ dependencies:
 dev_dependencies:
   test: any
   grinder: any
+
+transformers:
+- $dart2js:
+    $exclude: 'web/**.dart'
