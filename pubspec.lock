@@ -4,7 +4,7 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.26.1+7"
+    version: "0.26.1+9"
   ansicolor:
     description: ansicolor
     source: hosted
@@ -28,15 +28,15 @@ packages:
   binary_interop:
     description: binary_interop
     source: hosted
-    version: "0.0.32"
+    version: "0.0.33"
   binary_types:
     description: binary_types
     source: hosted
-    version: "0.0.54"
+    version: "0.0.55"
   bridge:
     description:
       ref: develop
-      resolved-ref: "27b36e44d5bdc10225b13e1c5e7e834ce2566b1d"
+      resolved-ref: "41e6be0dec0a5fdcf8a92879409b630ac077339f"
       url: "https://github.com/dart-bridge/framework"
     source: git
     version: "1.0.0-alpha7"
@@ -47,7 +47,7 @@ packages:
   ccompilers:
     description: ccompilers
     source: hosted
-    version: "0.2.10"
+    version: "0.2.11"
   charcode:
     description: charcode
     source: hosted
@@ -91,7 +91,7 @@ packages:
   formler:
     description: formler
     source: hosted
-    version: "0.0.8"
+    version: "0.1.2"
   glob:
     description: glob
     source: hosted
@@ -143,7 +143,7 @@ packages:
   logging:
     description: logging
     source: hosted
-    version: "0.9.3"
+    version: "0.11.2"
   macro_processor:
     description: macro_processor
     source: hosted
@@ -191,7 +191,7 @@ packages:
   pool:
     description: pool
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   postgresql:
     description: postgresql
     source: hosted
@@ -247,7 +247,7 @@ packages:
   sqljocky:
     description: sqljocky
     source: hosted
-    version: "0.13.0"
+    version: "0.14.1"
   stack_trace:
     description: stack_trace
     source: hosted
@@ -267,7 +267,7 @@ packages:
   test:
     description: test
     source: hosted
-    version: "0.12.4+9"
+    version: "0.12.5"
   text:
     description: text
     source: hosted
@@ -275,11 +275,7 @@ packages:
   trestle:
     description: trestle
     source: hosted
-    version: "0.5.4"
-  unittest:
-    description: unittest
-    source: hosted
-    version: "0.12.4"
+    version: "0.5.5+1"
   unsafe_extension:
     description: unsafe_extension
     source: hosted
