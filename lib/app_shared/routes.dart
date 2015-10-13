@@ -35,6 +35,14 @@ class Routes {
     'bridge.database': [
       new DocRoute('bridge.database',
           'Overview', () => _docs.get('database/index')),
+      new DocRoute('bridge.database/gateway',
+          'Gateway', () => _docs.get('database/gateway')),
+      new DocRoute('bridge.database/repository',
+          'Repository', () => _docs.get('database/repository')),
+      new DocRoute('bridge.database/model',
+          'Model', () => _docs.get('database/model')),
+      new DocRoute('bridge.database/migration',
+          'Migration', () => _docs.get('database/migration')),
     ],
     'bridge.tether': [
       new DocRoute('bridge.tether',

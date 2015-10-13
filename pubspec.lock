@@ -127,7 +127,7 @@ packages:
   libffi6_extension:
     description: libffi6_extension
     source: hosted
-    version: "0.0.6"
+    version: "0.0.11"
   libffi6_support:
     description: libffi6_support
     source: hosted
@@ -140,10 +140,6 @@ packages:
     description: lists
     source: hosted
     version: "0.0.21"
-  locking:
-    description: locking
-    source: hosted
-    version: "0.0.9"
   logging:
     description: logging
     source: hosted
@@ -200,6 +196,10 @@ packages:
     description: postgresql
     source: hosted
     version: "0.3.1+1"
+  pub_cache:
+    description: pub_cache
+    source: hosted
+    version: "0.1.0"
   pub_semver:
     description: pub_semver
     source: hosted
@@ -208,6 +208,10 @@ packages:
     description: quiver
     source: hosted
     version: "0.21.4"
+  semaphore:
+    description: semaphore
+    source: hosted
+    version: "0.0.1"
   shelf:
     description: shelf
     source: hosted
@@ -279,7 +283,7 @@ packages:
   unsafe_extension:
     description: unsafe_extension
     source: hosted
-    version: "0.0.19"
+    version: "0.0.23"
   unscripted:
     description: unscripted
     source: hosted
