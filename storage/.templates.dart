@@ -2,6 +2,84 @@ import 'package:bridge/view.dart';
 class Templates extends TemplateCache {
 Templates(Map<Symbol, dynamic> variables) : super(variables);
 Map<String, TemplateGenerator> get collection => {
+'code_windows.cli': () async* {
+yield '''<div class="code-window">''';
+yield '''  <i class='code-window__fake-button --red'></i>''';
+yield '''  <i class='code-window__fake-button --yellow'></i>''';
+yield '''  <i class='code-window__fake-button --green'></i>''';
+yield '''    <pre><code class="language-bridge-cli"><span class="hljs-literal">=<span class="hljs-method"> </span><span class="hljs-method">s</span><span class="hljs-method">t</span><span class="hljs-method">a</span><span class="hljs-method">r</span><span class="hljs-method">t</span></span>''';
+yield '''Server started on http:\/\/localhost:1337''';
+yield '''<span class="hljs-literal">=</span> <span class="hljs-method">awesome_sauce</span>''';
+yield '''Aww yeah!''';
+yield '''</code></pre>''';
+
+yield '''</div>''';
+
+},
+'code_windows.templating': () async* {
+yield '''<div class="code-window">''';
+yield '''  <i class='code-window__fake-button --red'></i>''';
+yield '''  <i class='code-window__fake-button --yellow'></i>''';
+yield '''  <i class='code-window__fake-button --green'></i>''';
+yield '''    <pre><code class="language-chalk">@<span class="hljs-keyword">extends</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'app'</span><span class="hljs-punctuation">)</span></span><br>''';
+yield '''@<span class="hljs-keyword">start block</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'content'</span><span class="hljs-punctuation">)</span></span><br>''';
+yield '''  <span class='hljs-comment'>\/\/ Display all items</span>''';
+yield '''  <span class="hljs-keyword">&lt;ul&gt;</span>''';
+yield '''    @<span class="hljs-keyword">for</span> <span class="dart"><span class="hljs-punctuation">(</span>item <span class="hljs-keyword">in</span> items<span class="hljs-punctuation">)</span></span>''';
+yield '''      <span class="hljs-keyword">&lt;li&gt;</span><span class="hljs-literal">\${<span class="dart">item.<span class="hljs-method">name</span></span>}</span><span class="hljs-keyword">&lt;/li&gt;</span>''';
+yield '''    @<span class="hljs-keyword">end for</span>''';
+yield '''  <span class="hljs-keyword">&lt;/ul&gt;</span><br>''';
+yield '''@<span class="hljs-keyword">end block</span>''';
+yield '''</code></pre>''';
+
+yield '''</div>''';
+
+},
+'code_windows.tether': () async* {
+for (final line in r'''
+
+<div class="code-window --back">
+  <i class='code-window__fake-button --red'></i>
+  <i class='code-window__fake-button --yellow'></i>
+  <i class='code-window__fake-button --green'></i>
+    <pre><code class="language-dart"><span class="hljs-comment">// Server side</span>
+tether.<span class="hljs-method">listen</span><span class="hljs-punctuation">(</span><span class="hljs-string">'add article'</span>, <span class="hljs-punctuation">(</span><span class="hljs-type">Article</span> article<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
+  articles.<span class="hljs-method">add</span><span class="hljs-punctuation">(</span>article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br>
+  <span class="hljs-comment">// Realtime broadcasting events</span>
+  tetherManager.<span class="hljs-method">broadcast</span><span class="hljs-punctuation">(</span><span class="hljs-string">'article was added'</span>, article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span>
+<span class="hljs-punctuation">}</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span>
+</code></pre>
+</div>
+
+<div class="code-window --front">
+  <i class='code-window__fake-button --red'></i>
+  <i class='code-window__fake-button --yellow'></i>
+  <i class='code-window__fake-button --green'></i>
+    <pre><code class="language-dart"><span class="hljs-comment">// Client side</span>
+var article <span class="hljs-punctuation">=</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Article</span><span class="hljs-punctuation">(</span><span class="hljs-string">'Bridge is amazing!'</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br>
+tether.<span class="hljs-method">send</span><span class="hljs-punctuation">(</span><span class="hljs-string">'add article'</span>, article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span>
+</code></pre>
+</div>
+
+'''.split('\n')) yield line;
+
+},
+'code_windows.welcome_controller': () async* {
+yield '''<div class="code-window">''';
+yield '''  <i class='code-window__fake-button --red'></i>''';
+yield '''  <i class='code-window__fake-button --yellow'></i>''';
+yield '''  <i class='code-window__fake-button --green'></i>''';
+yield '''    <pre><code class="language-dart"><span class="hljs-keyword">part</span> <span class="hljs-keyword">of</span> main<span class="hljs-punctuation">;</span><br>''';
+yield '''<span class="hljs-keyword">class</span> <span class="hljs-type">WelcomeController</span> <span class="hljs-punctuation">{</span>''';
+yield '''  index<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>''';
+yield '''    <span class="hljs-keyword">return</span> template<span class="hljs-punctuation">(</span><span class="hljs-string">'index'</span><span class="hljs-punctuation">)</span>''';
+yield '''      ..<span class="hljs-method">title</span> <span class="hljs-punctuation">=</span> <span class="hljs-string">'Hello, world!'</span><span class="hljs-punctuation">;</span>''';
+yield '''  <span class="hljs-punctuation">}</span>''';
+yield '''<span class="hljs-punctuation">}</span>''';
+yield '''</code></pre>''';
+yield '''</div>''';
+
+},
 'doc': () async* {
 yield* $extends('masters.page', {
 
@@ -65,7 +143,7 @@ yield '''        Bridge is a full stack modular web framework for Dart,''';
 yield '''        with clarity and agility in mind.''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/welcome_controller.png">''';
+yield* $generate('code_windows.welcome_controller');
 yield '''  </section>''';
 
 yield '''  <section id="realtime">''';
@@ -75,9 +153,10 @@ yield '''      <h1>Realtime</h1>''';
 yield '''      <p>''';
 yield '''        Interact with your running application live,''';
 yield '''        from the command line shell instance.''';
+yield '''        <a href="/docs/bridge.cli" class="read-more">Read&nbsp;more</a>''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/cli.png">''';
+yield* $generate('code_windows.cli');
 yield '''  </section>''';
 
 yield '''  <section id="fast-modern">''';
@@ -85,11 +164,12 @@ yield '''    <div class="copy">''';
 yield '''      <h1>Fast &amp; Modern</h1>''';
 
 yield '''      <p>''';
-yield '''        Templates and API that’s made for the modern web.''';
-yield '''        Automagic pre-compilation for <span class="pale-red">blazing</span> speed.''';
+yield '''        Optional server side templating that’s made for the modern web.''';
+yield '''        Pre-compiled for <span class="pale-red">blazing</span>&nbsp;speed.''';
+yield '''        <a href="/docs/bridge.view" class="read-more">Read&nbsp;more</a>''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/templating.png">''';
+yield* $generate('code_windows.templating');
 yield '''  </section>''';
 
 yield '''  <section id="end-to-end">''';
@@ -99,9 +179,10 @@ yield '''      <h1>End-to-end</h1>''';
 yield '''      <p>''';
 yield '''        Connected with WebSockets through the Tether.''';
 yield '''        It’s what we wished XHR would be like.''';
+yield '''        <a href="/docs/bridge.tether" class="read-more">Read&nbsp;more</a>''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/tether.png">''';
+yield* $generate('code_windows.tether');
 yield '''  </section>''';
 
 yield '''  <section id="get-started">''';

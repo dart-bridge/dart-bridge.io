@@ -19,7 +19,7 @@ yield '''        Bridge is a full stack modular web framework for Dart,''';
 yield '''        with clarity and agility in mind.''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/welcome_controller.png">''';
+yield* $generate('code_windows.welcome_controller');
 yield '''  </section>''';
 
 yield '''  <section id="realtime">''';
@@ -29,9 +29,10 @@ yield '''      <h1>Realtime</h1>''';
 yield '''      <p>''';
 yield '''        Interact with your running application live,''';
 yield '''        from the command line shell instance.''';
+yield '''        <a href="/docs/bridge.cli" class="read-more">Read&nbsp;more</a>''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/cli.png">''';
+yield* $generate('code_windows.cli');
 yield '''  </section>''';
 
 yield '''  <section id="fast-modern">''';
@@ -39,11 +40,12 @@ yield '''    <div class="copy">''';
 yield '''      <h1>Fast &amp; Modern</h1>''';
 
 yield '''      <p>''';
-yield '''        Templates and API that’s made for the modern web.''';
-yield '''        Automagic pre-compilation for <span class="pale-red">blazing</span> speed.''';
+yield '''        Optional server side templating that’s made for the modern web.''';
+yield '''        Pre-compiled for <span class="pale-red">blazing</span>&nbsp;speed.''';
+yield '''        <a href="/docs/bridge.view" class="read-more">Read&nbsp;more</a>''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/templating.png">''';
+yield* $generate('code_windows.templating');
 yield '''  </section>''';
 
 yield '''  <section id="end-to-end">''';
@@ -53,9 +55,10 @@ yield '''      <h1>End-to-end</h1>''';
 yield '''      <p>''';
 yield '''        Connected with WebSockets through the Tether.''';
 yield '''        It’s what we wished XHR would be like.''';
+yield '''        <a href="/docs/bridge.tether" class="read-more">Read&nbsp;more</a>''';
 yield '''      </p>''';
 yield '''    </div>''';
-yield '''    <img class='figure' src="/img/tether.png">''';
+yield* $generate('code_windows.tether');
 yield '''  </section>''';
 
 yield '''  <section id="get-started">''';

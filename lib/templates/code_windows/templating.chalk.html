@@ -1,0 +1,16 @@
+<div class="code-window">
+  <i class='code-window__fake-button --red'></i>
+  <i class='code-window__fake-button --yellow'></i>
+  <i class='code-window__fake-button --green'></i>
+    <pre><code class="language-chalk">@<span class="hljs-keyword">extends</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'app'</span><span class="hljs-punctuation">)</span></span><br>
+@<span class="hljs-keyword">start block</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'content'</span><span class="hljs-punctuation">)</span></span><br>
+  <span class='hljs-comment'>\/\/ Display all items</span>
+  <span class="hljs-keyword">&lt;ul&gt;</span>
+    @<span class="hljs-keyword">for</span> <span class="dart"><span class="hljs-punctuation">(</span>item <span class="hljs-keyword">in</span> items<span class="hljs-punctuation">)</span></span>
+      <span class="hljs-keyword">&lt;li&gt;</span><span class="hljs-literal">\${<span class="dart">item.<span class="hljs-method">name</span></span>}</span><span class="hljs-keyword">&lt;/li&gt;</span>
+    @<span class="hljs-keyword">end for</span>
+  <span class="hljs-keyword">&lt;/ul&gt;</span><br>
+@<span class="hljs-keyword">end block</span>
+</code></pre>
+
+</div>

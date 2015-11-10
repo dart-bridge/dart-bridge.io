@@ -5,7 +5,7 @@ class Router {
 
   Router() {
     window.onPopState
-        .where((e) => e.state != null)
+//        .where((e) => e.state != null)
         .map((e) => window.location.pathname)
         .listen(_navigate);
   }
@@ -35,7 +35,8 @@ class Router {
       if (matcher.hasMatch(uri))
         return _updateListeners(matcher.firstMatch(uri), _routes[matcher]);
     }
-    window.location.assign(uri);
+    if (window.location.pathname != uri)
+      window.location.assign(uri);
   }
 
   void _updateListeners(Match match, List<StreamController<Match>> listeners) {

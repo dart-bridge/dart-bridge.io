@@ -2,49 +2,66 @@ section
   text-align center
   overflow hidden
 
-.copy, .figure
-  transition-property opacity, transform
-  transition-timing-function cubic-bezier(.29, .82, .34, .99)
-  transition-duration 1.3s
+  .copy, .code-window
+    transition-property opacity, transform
+    transition-timing-function cubic-bezier(.29, .82, .34, .99)
+    transition-duration 1.3s
+
+  .code-window
+    margin-top 4em
+
+  a.read-more
+    color inherit
+    font-size(0.6em, raw: true)
+    font-weight 400
+    text-transform uppercase
+    margin-left 0.4em
+  a.read-more:after
+    content '►'
+    margin-left 0.2em
+    color inherit
 
 html.js section:not(.shown)
-  .copy, .figure
+  .copy, .code-window
     opacity 0
 
   .copy
     transform translateY(7em)
 
-  .figure
+  .code-window
     transform translateY(12em)
+
+  .code-window.\\--back
+    transform translateY(16em)
 
 section#main
   background-color #fafafa
-  padding-top 15%
-  padding-bottom 5%
+  padding-top 9%
+  padding-bottom 9%
 
 section#main h1
   color #7596ff
 
 section#realtime
   background-color #ffe6ee
-  padding-top 12%
-  padding-bottom 8%
+  padding-top 7%
+  padding-bottom 7%
 
 section#realtime h1
   color #7596ff
 
 section#fast-modern
   background-color #7596ff
-  padding-top 15%
-  padding-bottom 0
+  padding-top 7%
+  padding-bottom 7%
 
 section#fast-modern h1, section#fast-modern p
   color white
 
 section#end-to-end
   background-color #1c1c1c
-  padding-top 15%
-  padding-bottom 5%
+  padding-top 7%
+  padding-bottom 7%
 
 section#end-to-end h1
   color white
@@ -58,8 +75,8 @@ section#get-started h1
 
 section#get-started
   background-color #fafafa
-  padding-top 10%
-  padding-bottom 10%
+  padding-top 7%
+  padding-bottom 7%
 
 img.emoji
   height 1.2em
@@ -102,20 +119,24 @@ img.emoji
     font-size 1.3
     line-height 1.7
 
-.figure
-  width 100%
+.code-window
   max-width 60em
 
-section#main .figure
+section#main .code-window
   max-width 65em
 
-section#realtime .figure
+section#realtime .code-window
   max-width 47em
 
-section#fast-modern .figure
-  max-width 95em
-  margin-bottom -0.3em
+section#fast-modern .code-window
+  max-width 65em
 
-section#end-to-end .figure
-  max-width 55em
-  margin-bottom 3em
+section#end-to-end .code-window
+  &.\\--back
+    max-width 50em
+  &.\\--front
+    max-width 40em
+  &:first-of-type
+    margin-top 3em
+  &:last-of-type
+    margin-bottom 3em
