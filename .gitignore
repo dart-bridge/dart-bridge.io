@@ -12,5 +12,6 @@ packages
 *.js.map
 
 node_modules
-storage/bridge.log
+storage/*
+!storage/.templates.dart
 .cupid_history
