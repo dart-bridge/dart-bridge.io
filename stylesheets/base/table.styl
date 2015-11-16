@@ -1,0 +1,35 @@
+table
+  width 100%
+  line-height 1.45
+
+  th
+    text-align left
+    font-weight bold
+    padding-bottom 0.4em
+
+  tr:first-child td
+    padding-top 0.4em
+
+  thead
+    border-bottom 1px solid rgba(0,0,0,0.05)
+
+@media (max-width 35em)
+  table
+    display block
+
+  thead, tbody
+    width 100%
+    display flex
+    flex-wrap wrap
+
+  tr
+    flex 1
+    flex-basis 100%
+    flex-wrap wrap
+    display flex
+
+  th, td
+    flex 1
+    text-overflow ellipsis
+    overflow hidden
+    white-space nowrap

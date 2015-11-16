@@ -4,7 +4,7 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.26.1+9"
+    version: "0.26.2+1"
   ansicolor:
     description: ansicolor
     source: hosted
@@ -16,7 +16,7 @@ packages:
   async:
     description: async
     source: hosted
-    version: "1.3.0"
+    version: "1.4.0"
   barback:
     description: barback
     source: hosted
@@ -36,10 +36,10 @@ packages:
   bridge:
     description:
       ref: develop
-      resolved-ref: "41e6be0dec0a5fdcf8a92879409b630ac077339f"
+      resolved-ref: e058a841e8125c7a78a146500d5ef691c30ce987
       url: "https://github.com/dart-bridge/framework"
     source: git
-    version: "1.0.0-alpha7"
+    version: "1.0.0-beta.2"
   build_tools:
     description: build_tools
     source: hosted
@@ -64,6 +64,10 @@ packages:
     description: console
     source: hosted
     version: "2.2.3"
+  container:
+    description: container
+    source: hosted
+    version: "0.1.2"
   crypto:
     description: crypto
     source: hosted
@@ -71,7 +75,7 @@ packages:
   csslib:
     description: csslib
     source: hosted
-    version: "0.12.1"
+    version: "0.12.2"
   cupid:
     description: cupid
     source: hosted
@@ -103,7 +107,7 @@ packages:
   grinder:
     description: grinder
     source: hosted
-    version: "0.7.2"
+    version: "0.8.0+1"
   html:
     description: html
     source: hosted
@@ -127,7 +131,7 @@ packages:
   libffi6_extension:
     description: libffi6_extension
     source: hosted
-    version: "0.0.11"
+    version: "0.0.12"
   libffi6_support:
     description: libffi6_support
     source: hosted
@@ -191,11 +195,11 @@ packages:
   pool:
     description: pool
     source: hosted
-    version: "1.2.0"
+    version: "1.2.1"
   postgresql:
     description: postgresql
     source: hosted
-    version: "0.3.1+1"
+    version: "0.3.2"
   pub_cache:
     description: pub_cache
     source: hosted
@@ -203,15 +207,15 @@ packages:
   pub_semver:
     description: pub_semver
     source: hosted
-    version: "1.2.2"
+    version: "1.2.3"
   quiver:
     description: quiver
     source: hosted
     version: "0.21.4"
-  semaphore:
-    description: semaphore
+  sandbox:
+    description: sandbox
     source: hosted
-    version: "0.0.1"
+    version: "0.0.3"
   shelf:
     description: shelf
     source: hosted
@@ -251,7 +255,7 @@ packages:
   stack_trace:
     description: stack_trace
     source: hosted
-    version: "1.4.2"
+    version: "1.5.0"
   string_scanner:
     description: string_scanner
     source: hosted
@@ -267,7 +271,7 @@ packages:
   test:
     description: test
     source: hosted
-    version: "0.12.5"
+    version: "0.12.5+1"
   text:
     description: text
     source: hosted
@@ -275,11 +279,11 @@ packages:
   trestle:
     description: trestle
     source: hosted
-    version: "0.5.5+1"
+    version: "0.6.0"
   unsafe_extension:
     description: unsafe_extension
     source: hosted
-    version: "0.0.23"
+    version: "0.0.24"
   unscripted:
     description: unscripted
     source: hosted

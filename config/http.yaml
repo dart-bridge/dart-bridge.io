@@ -5,3 +5,4 @@ server:
   host: localhost
   port: 1338
   public_root: web
+  build_root: storage/.build
