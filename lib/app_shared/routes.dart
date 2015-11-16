@@ -31,6 +31,10 @@ class Routes {
     'bridge.http': [
       new DocRoute('bridge.http',
           'Overview', () => _docs.get('http/index')),
+      new DocRoute('bridge.http/router',
+          'Router', () => _docs.get('http/router')),
+      new DocRoute('bridge.http/middleware',
+          'Middleware', () => _docs.get('http/middleware')),
     ],
     'bridge.database': [
       new DocRoute('bridge.database',
