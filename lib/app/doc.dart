@@ -1,4 +1,4 @@
-part of app.shared;
+part of app;
 
 class Doc {
   final String title;

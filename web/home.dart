@@ -29,6 +29,5 @@ class HomePresentation {
 
 main() {
   new HomePresentation();
-  anchorEvents(new Router());
   menu();
 }

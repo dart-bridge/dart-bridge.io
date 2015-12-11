@@ -4,10 +4,4 @@ part of app.shared;
 void registerTransport() {
   registerViewTransport(); // bridge.view
   registerExceptionsTransport(); // bridge.exceptions
-  registerTetherTransport(); // bridge.tether
-
-  serializer.register('Doc', Doc,
-      serialize: (Doc doc) => [doc.title, doc.url, doc.markup],
-      deserialize: (List doc) => new Doc(doc[0], doc[1], doc[2])
-  );
 }

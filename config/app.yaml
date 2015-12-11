@@ -7,6 +7,5 @@ service_providers:
   - bridge.tether.TetherServiceProvider
   - bridge.database.DatabaseServiceProvider
   - services.MainServiceProvider
-  - services.HttpExceptionsServiceProvider
   - services.CommandsServiceProvider
   - services.DocsServiceProvider

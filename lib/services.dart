@@ -21,6 +21,5 @@ import 'package:shelf/shelf.dart' as shelf;
 /// Remember that the service providers are explicitly registered
 /// in **config/app.yaml**
 part 'service_providers/main_service_provider.dart';
-part 'service_providers/http_exceptions_service_provider.dart';
 part 'service_providers/commands_service_provider.dart';
 part 'service_providers/docs_service_provider.dart';

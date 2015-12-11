@@ -1,2 +1,2 @@
 https: env(APP_DOCS_HTTPS, true)
-host: env(APP_DOCS_HOST, dart-bridge.github.io)
+host: env(APP_DOCS_HOST, dart-bridge.github.io/docs)

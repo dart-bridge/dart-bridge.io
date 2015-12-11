@@ -1,7 +1,7 @@
 part of services;
 
 class DocsServiceProvider extends ServiceProvider {
-  Future setUp(DocsRepository docsRepo) async {
-    print(await docsRepo.fetch());
+  Future setUp(Application app, DocsRepository docsRepo) async {
+    app.singleton(docsRepo);
   }
 }

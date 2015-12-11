@@ -4,7 +4,13 @@ part of services;
 /// started using `dart bridge`. Read more about the [ServiceProvider]
 /// to learn how to implement your own.
 class MainServiceProvider extends ServiceProvider {
-  load(Container container, Main main, TetherManager tethers) async {
+  setUp(Container container, Main main) {
+    container.singleton(main);
+    container.singleton(main, as: Pipeline);
+  }
+
+  load(Container container, Main main, Tethers tethers) async {
+
     // Register routes
     await container.resolve(main.routes);
 

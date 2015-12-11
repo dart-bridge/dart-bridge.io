@@ -7,9 +7,9 @@ yield '''<div class="code-window">''';
 yield '''  <i class='code-window__fake-button --red'></i>''';
 yield '''  <i class='code-window__fake-button --yellow'></i>''';
 yield '''  <i class='code-window__fake-button --green'></i>''';
-yield '''    <pre><code class="language-bridge-cli"><span class="hljs-literal">=<span class="hljs-method"> </span><span class="hljs-method">s</span><span class="hljs-method">t</span><span class="hljs-method">a</span><span class="hljs-method">r</span><span class="hljs-method">t</span></span>''';
-yield '''Server started on http:\/\/localhost:1337''';
-yield '''<span class="hljs-literal">=</span> <span class="hljs-method">awesome_sauce</span>''';
+yield '''    <pre><code class="language-bridge-cli"><span class="hljs-literal">=<span class="hljs-method"> </span><span class="hljs-method">s</span><span class="hljs-method">t</span><span class="hljs-method">a</span><span class="hljs-method">r</span><span class="hljs-method">t</span></span><br>''';
+yield '''Server started on http:\/\/localhost:1337<br>''';
+yield '''<span class="hljs-literal">=</span> <span class="hljs-method">awesome_sauce</span><br>''';
 yield '''Aww yeah!''';
 yield '''</code></pre>''';
 yield '''</div>''';
@@ -20,14 +20,14 @@ yield '''<div class="code-window">''';
 yield '''  <i class='code-window__fake-button --red'></i>''';
 yield '''  <i class='code-window__fake-button --yellow'></i>''';
 yield '''  <i class='code-window__fake-button --green'></i>''';
-yield '''    <pre><code class="language-chalk">@<span class="hljs-keyword">extends</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'app'</span><span class="hljs-punctuation">)</span></span><br>''';
-yield '''@<span class="hljs-keyword">start block</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'content'</span><span class="hljs-punctuation">)</span></span><br>''';
-yield '''  <span class='hljs-comment'>\/\/ Display all items</span>''';
-yield '''  <span class="hljs-keyword">&lt;ul&gt;</span>''';
-yield '''    @<span class="hljs-keyword">for</span> <span class="dart"><span class="hljs-punctuation">(</span>item <span class="hljs-keyword">in</span> items<span class="hljs-punctuation">)</span></span>''';
-yield '''      <span class="hljs-keyword">&lt;li&gt;</span><span class="hljs-literal">\${<span class="dart">item.<span class="hljs-method">name</span></span>}</span><span class="hljs-keyword">&lt;/li&gt;</span>''';
-yield '''    @<span class="hljs-keyword">end for</span>''';
-yield '''  <span class="hljs-keyword">&lt;/ul&gt;</span><br>''';
+yield '''    <pre><code class="language-chalk">@<span class="hljs-keyword">extends</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'app'</span><span class="hljs-punctuation">)</span></span><br><br>''';
+yield '''@<span class="hljs-keyword">start block</span> <span class="dart"><span class="hljs-punctuation">(</span><span class="hljs-string">'content'</span><span class="hljs-punctuation">)</span></span><br><br>''';
+yield '''  <span class='hljs-comment'>\/\/ Display all items</span><br>''';
+yield '''  <span class="hljs-keyword">&lt;ul&gt;</span><br>''';
+yield '''    @<span class="hljs-keyword">for</span> <span class="dart"><span class="hljs-punctuation">(</span>item <span class="hljs-keyword">in</span> items<span class="hljs-punctuation">)</span></span><br>''';
+yield '''      <span class="hljs-keyword">&lt;li&gt;</span><span class="hljs-literal">\${<span class="dart">item.<span class="hljs-method">name</span></span>}</span><span class="hljs-keyword">&lt;/li&gt;</span><br>''';
+yield '''    @<span class="hljs-keyword">end for</span><br>''';
+yield '''  <span class="hljs-keyword">&lt;/ul&gt;</span><br><br>''';
 yield '''@<span class="hljs-keyword">end block</span>''';
 yield '''</code></pre>''';
 yield '''</div>''';
@@ -40,11 +40,11 @@ for (final line in r'''
   <i class='code-window__fake-button --red'></i>
   <i class='code-window__fake-button --yellow'></i>
   <i class='code-window__fake-button --green'></i>
-    <pre><code class="language-dart"><span class="hljs-comment">// Server side</span>
-tether.<span class="hljs-method">listen</span><span class="hljs-punctuation">(</span><span class="hljs-string">'add article'</span>, <span class="hljs-punctuation">(</span><span class="hljs-type">Article</span> article<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>
-  articles.<span class="hljs-method">add</span><span class="hljs-punctuation">(</span>article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br>
-  <span class="hljs-comment">// Realtime broadcasting events</span>
-  tetherManager.<span class="hljs-method">broadcast</span><span class="hljs-punctuation">(</span><span class="hljs-string">'article was added'</span>, article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span>
+    <pre><code class="language-dart"><span class="hljs-comment">// Server side</span><br>
+tether.<span class="hljs-method">listen</span><span class="hljs-punctuation">(</span><span class="hljs-string">'add article'</span>, <span class="hljs-punctuation">(</span><span class="hljs-type">Article</span> article<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span><br>
+  articles.<span class="hljs-method">add</span><span class="hljs-punctuation">(</span>article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br><br>
+  <span class="hljs-comment">// Realtime broadcasting events</span><br>
+  tetherManager.<span class="hljs-method">broadcast</span><span class="hljs-punctuation">(</span><span class="hljs-string">'article was added'</span>, article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br>
 <span class="hljs-punctuation">}</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span>
 </code></pre>
 </div>
@@ -52,8 +52,8 @@ tether.<span class="hljs-method">listen</span><span class="hljs-punctuation">(</
   <i class='code-window__fake-button --red'></i>
   <i class='code-window__fake-button --yellow'></i>
   <i class='code-window__fake-button --green'></i>
-    <pre><code class="language-dart"><span class="hljs-comment">// Client side</span>
-var article <span class="hljs-punctuation">=</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Article</span><span class="hljs-punctuation">(</span><span class="hljs-string">'Bridge is amazing!'</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br>
+    <pre><code class="language-dart"><span class="hljs-comment">// Client side</span><br>
+var article <span class="hljs-punctuation">=</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Article</span><span class="hljs-punctuation">(</span><span class="hljs-string">'Bridge is amazing!'</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span><br><br>
 tether.<span class="hljs-method">send</span><span class="hljs-punctuation">(</span><span class="hljs-string">'add article'</span>, article<span class="hljs-punctuation">)</span><span class="hljs-punctuation">;</span>
 </code></pre>
 </div>
@@ -66,12 +66,12 @@ yield '''<div class="code-window">''';
 yield '''  <i class='code-window__fake-button --red'></i>''';
 yield '''  <i class='code-window__fake-button --yellow'></i>''';
 yield '''  <i class='code-window__fake-button --green'></i>''';
-yield '''    <pre><code class="language-dart"><span class="hljs-keyword">part</span> <span class="hljs-keyword">of</span> main<span class="hljs-punctuation">;</span><br>''';
-yield '''<span class="hljs-keyword">class</span> <span class="hljs-type">WelcomeController</span> <span class="hljs-punctuation">{</span>''';
-yield '''  index<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span>''';
-yield '''    <span class="hljs-keyword">return</span> template<span class="hljs-punctuation">(</span><span class="hljs-string">'index'</span><span class="hljs-punctuation">)</span>''';
-yield '''      ..<span class="hljs-method">title</span> <span class="hljs-punctuation">=</span> <span class="hljs-string">'Hello, world!'</span><span class="hljs-punctuation">;</span>''';
-yield '''  <span class="hljs-punctuation">}</span>''';
+yield '''    <pre><code class="language-dart"><span class="hljs-keyword">part</span> <span class="hljs-keyword">of</span> main<span class="hljs-punctuation">;</span><br><br>''';
+yield '''<span class="hljs-keyword">class</span> <span class="hljs-type">WelcomeController</span> <span class="hljs-punctuation">{</span><br>''';
+yield '''  index<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">{</span><br>''';
+yield '''    <span class="hljs-keyword">return</span> template<span class="hljs-punctuation">(</span><span class="hljs-string">'index'</span><span class="hljs-punctuation">)</span><br>''';
+yield '''      ..<span class="hljs-method">title</span> <span class="hljs-punctuation">=</span> <span class="hljs-string">'Hello, world!'</span><span class="hljs-punctuation">;</span><br>''';
+yield '''  <span class="hljs-punctuation">}</span><br>''';
 yield '''<span class="hljs-punctuation">}</span>''';
 yield '''</code></pre>''';
 yield '''</div>''';
@@ -81,12 +81,12 @@ yield '''</div>''';
 yield* $extends('masters.page', {
 'page-header': () async* {
 yield '''  <h1 class="choke" id='doc-title'>''';
-yield '''    ${$esc(docRoute.title)}''';
+yield '''    ${$esc(title)}''';
 yield '''  </h1>''';
 },
 'page-content': () async* {
 yield '''  <div id="doc-content">''';
-yield '''    ${await docRoute.doc()}''';
+yield '''    ${markup}''';
 yield '''  </div>''';
 },
 

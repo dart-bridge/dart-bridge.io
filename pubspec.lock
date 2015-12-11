@@ -4,7 +4,7 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.26.2+1"
+    version: "0.26.4"
   ansicolor:
     description: ansicolor
     source: hosted
@@ -36,7 +36,7 @@ packages:
   bridge:
     description:
       ref: develop
-      resolved-ref: e058a841e8125c7a78a146500d5ef691c30ce987
+      resolved-ref: "54fc3c275bf52de776e79282f3184cd4bd2e32bb"
       url: "https://github.com/dart-bridge/framework"
     source: git
     version: "1.0.0-beta.2"
@@ -59,7 +59,7 @@ packages:
   collection:
     description: collection
     source: hosted
-    version: "1.1.3"
+    version: "1.2.0"
   console:
     description: console
     source: hosted
@@ -79,7 +79,7 @@ packages:
   cupid:
     description: cupid
     source: hosted
-    version: "0.9.9"
+    version: "0.9.10"
   dlog:
     description: dlog
     source: hosted
@@ -179,7 +179,7 @@ packages:
   path:
     description: path
     source: hosted
-    version: "1.3.6"
+    version: "1.3.9"
   patsubst:
     description: patsubst
     source: hosted
@@ -272,6 +272,10 @@ packages:
     description: test
     source: hosted
     version: "0.12.5+1"
+  tether:
+    description: tether
+    source: hosted
+    version: "0.1.5"
   text:
     description: text
     source: hosted
