@@ -46,7 +46,7 @@ class Main extends Pipeline {
       allDocs.forEach((String category, List<Doc> docs) {
         for (final doc in docs) {
           router.get(doc.url, () {
-            return template('doc')
+            return template('doc').withScript('generic')
               ..title = doc.title
               ..markup = doc.markup
               ..menu = menu
