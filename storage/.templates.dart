@@ -287,7 +287,7 @@ yield* $for(menu.keys, (category) async* {
 yield '''          <ul class="menu-master category">''';
 yield '''            <span>${$esc(category)}</span>''';
 yield* $for(menu[category], (route) async* {
-yield '''              <li><a href="${$esc(route.url)}">${$esc(route.title)}</a></li>''';
+yield '''              <li ${route.url == currentUrl ? 'class="active"' : ''}><a href="${route.url}">${$esc(route.title)}</a></li>''';
 });
 yield '''          </ul>''';
 });

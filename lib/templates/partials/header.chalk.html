@@ -38,7 +38,7 @@
           <ul class="menu-master category">
             <span>$category</span>
             @for (route in menu[category])
-              <li><a href="${route.url}">${route.title}</a></li>
+              <li $!!{route.url == currentUrl ? 'class="active"' : ''}><a href="$!!{route.url}">${route.title}</a></li>
             @end for
           </ul>
         @end for

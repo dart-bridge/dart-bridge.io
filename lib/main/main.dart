@@ -45,13 +45,14 @@ class Main extends Pipeline {
     router.group('docs', () {
       allDocs.forEach((String category, List<Doc> docs) {
         for (final doc in docs) {
-          router.get(doc.url, () {
+          router.get(doc.url, (Request request) {
             return template('doc').withScript('generic')
               ..title = doc.title
               ..markup = doc.markup
               ..menu = menu
               ..headerColor = 'blue'
-              ..docs = allDocs;
+              ..docs = allDocs
+              ..currentUrl = url(request.url.path);
           });
         }
       });
